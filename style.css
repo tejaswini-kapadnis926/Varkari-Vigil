@@ -1,0 +1,3304 @@
+/* ============================================
+   VARKARI VIGIL
+   FRONTEND DESIGN SYSTEM
+============================================ */
+
+:root {
+    --bg: #0b1714;
+    --sidebar: #091411;
+    --card: #0d1a17;
+    --card-2: #101f1b;
+
+    --border: rgba(255, 255, 255, 0.08);
+
+    --text: #f4f6ef;
+    --muted: #82918b;
+
+    --saffron: #f4a340;
+    --saffron-light: #ffc56b;
+
+    --green: #62d394;
+    --teal: #45c7b4;
+    --yellow: #f0c35b;
+    --red: #ed625b;
+    --blue: #6aa7ff;
+}
+
+
+/* ============================================
+   RESET
+============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* ============================================
+   APP
+============================================ */
+
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* ============================================
+   SIDEBAR
+============================================ */
+
+.sidebar {
+    width: 245px;
+    min-height: 100vh;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    background: var(--sidebar);
+
+    border-right: 1px solid var(--border);
+
+    padding: 28px 16px;
+
+    z-index: 100;
+}
+
+
+/* ============================================
+   LOGO
+============================================ */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 0 10px;
+
+    margin-bottom: 45px;
+}
+
+.logo-symbol {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    color: var(--saffron);
+
+    font-size: 24px;
+
+    border: 1px solid rgba(244, 163, 64, 0.3);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(244, 163, 64, 0.15),
+            transparent
+        );
+}
+
+.logo-title {
+    font-size: 16px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.logo-subtitle {
+    display: block;
+
+    color: var(--saffron);
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    margin-top: 4px;
+}
+
+
+/* ============================================
+   NAVIGATION
+============================================ */
+
+.nav-title {
+    color: #56645f;
+
+    font-size: 9px;
+
+    letter-spacing: 1.8px;
+
+    margin: 0 12px 9px;
+}
+
+.nav-title.space {
+    margin-top: 27px;
+}
+
+.nav-item {
+    width: 100%;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 12px;
+
+    margin-bottom: 4px;
+
+    border-radius: 10px;
+
+    color: var(--muted);
+
+    text-decoration: none;
+
+    font-size: 12px;
+
+    transition: 0.25s ease;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.035);
+    color: white;
+}
+
+.nav-item.active {
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(244, 163, 64, 0.13),
+            rgba(244, 163, 64, 0.025)
+        );
+
+    box-shadow:
+        inset 3px 0 0 var(--saffron);
+}
+
+.nav-icon {
+    width: 22px;
+    text-align: center;
+
+    color: #63726c;
+
+    font-size: 15px;
+}
+
+.nav-item.active .nav-icon {
+    color: var(--saffron);
+}
+
+
+/* ============================================
+   AI STATUS BOX
+============================================ */
+
+.ai-status {
+    position: absolute;
+
+    left: 16px;
+    right: 16px;
+    bottom: 22px;
+
+    padding: 14px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.ai-orb {
+    width: 31px;
+    height: 31px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #fff,
+            var(--saffron) 35%,
+            rgba(244, 163, 64, 0.05) 70%
+        );
+
+    box-shadow:
+        0 0 20px rgba(244, 163, 64, 0.3);
+}
+
+.ai-status-text strong {
+    display: block;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+    color: var(--saffron);
+}
+
+.ai-status-text span {
+    display: block;
+
+    font-size: 9px;
+
+    color: var(--muted);
+
+    margin-top: 4px;
+}
+
+.ai-online {
+    margin-left: auto;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    box-shadow: 0 0 10px var(--green);
+}
+
+
+/* ============================================
+   MAIN CONTENT
+============================================ */
+
+.main {
+    margin-left: 245px;
+
+    width: calc(100% - 245px);
+
+    min-height: 100vh;
+}
+
+
+/* ============================================
+   TOPBAR
+============================================ */
+
+.topbar {
+    height: 78px;
+
+    padding: 0 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-bottom: 1px solid var(--border);
+
+    background: rgba(7, 16, 14, 0.92);
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 50;
+
+    backdrop-filter: blur(15px);
+}
+
+.page-kicker {
+    color: var(--saffron);
+
+    font-size: 8px;
+
+    letter-spacing: 2px;
+}
+
+.page-title {
+    font-size: 20px;
+
+    margin-top: 5px;
+}
+
+.top-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+}
+
+.live {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: var(--green);
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+
+.live-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    box-shadow: 0 0 10px var(--green);
+
+    animation: livePulse 1.8s infinite;
+}
+
+.clock {
+    color: var(--muted);
+
+    font-family: monospace;
+
+    font-size: 11px;
+}
+
+.notification {
+    width: 34px;
+    height: 34px;
+
+    border-radius: 9px;
+
+    border: 1px solid var(--border);
+
+    background: rgba(255, 255, 255, 0.025);
+
+    color: var(--muted);
+
+    transition: 0.2s;
+}
+
+.notification:hover {
+    color: var(--saffron);
+
+    border-color: rgba(244, 163, 64, 0.35);
+}
+
+.profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+.avatar {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: rgba(244, 163, 64, 0.12);
+
+    border: 1px solid rgba(244, 163, 64, 0.2);
+
+    color: var(--saffron);
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+.profile strong {
+    font-size: 9px;
+}
+
+.profile span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 8px;
+
+    margin-top: 3px;
+}
+
+
+/* ============================================
+   WARI JOURNEY STRIP
+============================================ */
+
+.wari-strip {
+    min-height: 76px;
+
+    padding: 12px 32px;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.wari-name {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+.tilak {
+    width: 25px;
+    height: 32px;
+
+    border-left: 2px solid var(--saffron);
+    border-right: 2px solid var(--saffron);
+
+    color: var(--saffron);
+
+    text-align: center;
+
+    font-size: 24px;
+}
+
+.wari-name small {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 8px;
+
+    letter-spacing: 1.5px;
+}
+
+.wari-name strong {
+    display: block;
+
+    font-size: 11px;
+
+    margin-top: 4px;
+}
+
+
+/* ============================================
+   JOURNEY
+============================================ */
+
+.journey {
+    display: flex;
+
+    align-items: center;
+
+    width: 45%;
+
+    max-width: 560px;
+}
+
+.journey-place {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 8px;
+
+    color: var(--muted);
+
+    white-space: nowrap;
+}
+
+.journey-place span {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    border: 1px solid #5b6964;
+}
+
+.journey-place.done {
+    color: var(--green);
+}
+
+.journey-place.done span {
+    background: var(--green);
+
+    border-color: var(--green);
+}
+
+.journey-place.current {
+    color: var(--saffron);
+}
+
+.journey-place.current span {
+    background: var(--saffron);
+
+    border-color: var(--saffron);
+
+    box-shadow:
+        0 0 10px rgba(244, 163, 64, 0.5);
+}
+
+.journey-line {
+    height: 1px;
+
+    flex: 1;
+
+    margin: 0 10px;
+
+    background: #27312e;
+}
+
+.journey-line.active {
+    background:
+        linear-gradient(
+            90deg,
+            var(--green),
+            var(--saffron)
+        );
+}
+
+
+/* ============================================
+   JOURNEY INFO
+============================================ */
+
+.journey-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.journey-info small {
+    color: var(--muted);
+
+    font-size: 8px;
+}
+
+.journey-info strong {
+    color: var(--saffron);
+
+    font-size: 13px;
+}
+
+
+/* ============================================
+   CONTENT
+============================================ */
+
+.content {
+    padding: 30px 32px 40px;
+}
+
+
+/* ============================================
+   HERO
+============================================ */
+
+.hero {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: end;
+
+    margin-bottom: 25px;
+}
+
+.hero-label {
+    color: var(--teal);
+
+    font-size: 8px;
+
+    letter-spacing: 1.7px;
+}
+
+.hero h2 {
+    font-size: 31px;
+
+    line-height: 1.15;
+
+    max-width: 680px;
+
+    margin-top: 8px;
+}
+
+.hero h2 span {
+    color: #65726d;
+}
+
+.hero p {
+    color: var(--muted);
+
+    font-size: 10px;
+
+    margin-top: 9px;
+
+    max-width: 650px;
+
+    line-height: 1.6;
+}
+
+.hero-button {
+    border: 1px solid rgba(244, 163, 64, 0.3);
+
+    color: var(--saffron-light);
+
+    background: rgba(244, 163, 64, 0.07);
+
+    padding: 11px 15px;
+
+    border-radius: 9px;
+
+    font-size: 9px;
+
+    transition: 0.2s;
+}
+
+.hero-button:hover {
+    background: rgba(244, 163, 64, 0.14);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(244, 163, 64, 0.08);
+}
+
+
+/* ============================================
+   KPI GRID
+============================================ */
+
+.kpi-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 13px;
+
+    margin-bottom: 14px;
+}
+
+.kpi {
+    min-height: 145px;
+
+    padding: 18px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.012)
+        );
+
+    transition: 0.25s;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+.kpi::before {
+    content: "";
+
+    position: absolute;
+
+    width: 100px;
+    height: 100px;
+
+    right: -50px;
+    top: -50px;
+
+    border-radius: 50%;
+
+    background: rgba(244, 163, 64, 0.04);
+
+    filter: blur(10px);
+}
+
+.kpi:hover {
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(255, 255, 255, 0.14);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.18);
+}
+
+.kpi-header {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.kpi-title {
+    color: var(--muted);
+
+    font-size: 8px;
+
+    letter-spacing: 1.3px;
+}
+
+.kpi-symbol {
+    width: 27px;
+    height: 27px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    font-size: 12px;
+}
+
+.kpi-symbol.orange {
+    color: var(--saffron);
+
+    background:
+        rgba(244, 163, 64, 0.08);
+}
+
+.kpi-symbol.teal {
+    color: var(--teal);
+
+    background:
+        rgba(69, 199, 180, 0.08);
+}
+
+.kpi-symbol.yellow {
+    color: var(--yellow);
+
+    background:
+        rgba(240, 195, 91, 0.08);
+}
+
+.kpi-symbol.red {
+    color: var(--red);
+
+    background:
+        rgba(237, 98, 91, 0.08);
+}
+
+.kpi-value {
+    font-size: 32px;
+
+    font-weight: 700;
+
+    margin-top: 18px;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.kpi-value small {
+    color: #65716d;
+
+    font-size: 17px;
+}
+
+.kpi-bottom {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    margin-top: 7px;
+
+    font-size: 8px;
+
+    color: var(--muted);
+}
+
+.up {
+    color: var(--green);
+}
+
+.high {
+    color: var(--yellow);
+}
+
+.critical {
+    color: var(--red);
+}
+
+
+/* ============================================
+   MAIN GRID
+============================================ */
+
+.main-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.7fr 0.8fr;
+
+    gap: 14px;
+
+    margin-bottom: 14px;
+}
+
+
+/* ============================================
+   PANEL
+============================================ */
+
+.panel {
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.03),
+            rgba(255, 255, 255, 0.01)
+        );
+
+    overflow: hidden;
+
+    box-shadow:
+        0 8px 35px rgba(0, 0, 0, 0.08);
+}
+
+.panel-header {
+    height: 70px;
+
+    padding: 15px 18px;
+
+    border-bottom: 1px solid var(--border);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.panel-kicker {
+    color: #5f6d68;
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+}
+
+.panel-title {
+    font-size: 14px;
+
+    margin-top: 5px;
+}
+
+.panel-link {
+    border: none;
+
+    background: none;
+
+    color: var(--saffron);
+
+    font-size: 8px;
+}
+
+
+/* ============================================
+   MAP
+============================================ */
+
+.map {
+    height: 385px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            rgba(69, 199, 180, 0.08),
+            transparent 60%
+        ),
+        #0a1512;
+}
+
+.map::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    opacity: 0.35;
+
+    background-image:
+        linear-gradient(
+            rgba(255, 255, 255, 0.04) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.04) 1px,
+            transparent 1px
+        );
+
+    background-size: 45px 45px;
+}
+
+
+/* ============================================
+   MAP ROUTES
+============================================ */
+
+.route {
+    position: absolute;
+
+    height: 2px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(69, 199, 180, 0.55),
+            rgba(244, 163, 64, 0.6),
+            transparent
+        );
+
+    transform-origin: left;
+}
+
+.route.one {
+    width: 65%;
+
+    left: 9%;
+    top: 58%;
+
+    transform: rotate(-18deg);
+}
+
+.route.two {
+    width: 45%;
+
+    left: 35%;
+    top: 45%;
+
+    transform: rotate(35deg);
+}
+
+.route.three {
+    width: 35%;
+
+    left: 42%;
+    top: 68%;
+
+    transform: rotate(-42deg);
+}
+
+
+/* ============================================
+   MAP ZONES
+============================================ */
+
+.zone {
+    position: absolute;
+
+    width: 18px;
+    height: 18px;
+
+    border: none;
+
+    background: transparent;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+.zone::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 2px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    border: 2px solid #08110f;
+
+    z-index: 2;
+}
+
+.zone::after {
+    content: "";
+
+    position: absolute;
+
+    inset: -1px;
+
+    border-radius: 50%;
+
+    border: 1px solid var(--green);
+
+    animation: pulse 2s infinite;
+}
+
+.zone.warning::before {
+    background: var(--yellow);
+}
+
+.zone.warning::after {
+    border-color: var(--yellow);
+}
+
+.zone.danger::before {
+    background: var(--red);
+}
+
+.zone.danger::after {
+    border-color: var(--red);
+}
+
+.zone.one {
+    left: 21%;
+    top: 53%;
+}
+
+.zone.two {
+    left: 47%;
+    top: 36%;
+}
+
+.zone.three {
+    left: 65%;
+    top: 58%;
+}
+
+.zone.four {
+    left: 80%;
+    top: 43%;
+}
+
+
+/* ============================================
+   MAP LABELS
+============================================ */
+
+.map-label {
+    position: absolute;
+
+    color: rgba(255, 255, 255, 0.82);
+
+    font-family: monospace;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 1.2px;
+
+    text-shadow: 0 1px 5px rgba(0,0,0,0.9);
+
+    z-index: 10;
+}
+
+.label-one {
+    left: 18%;
+    top: 48%;
+}
+
+.label-two {
+    left: 40%;
+    top: 29%;
+}
+
+.label-three {
+    left: 61%;
+    top: 64%;
+}
+
+.label-four {
+    right: 7%;
+    top: 36%;
+}
+
+
+/* ============================================
+   MAP LEGEND
+============================================ */
+
+.legend {
+    position: absolute;
+
+    left: 17px;
+    bottom: 15px;
+
+    padding: 8px 10px;
+
+    display: flex;
+
+    gap: 13px;
+
+    background:
+        rgba(5, 10, 9, 0.8);
+
+    border: 1px solid var(--border);
+
+    border-radius: 7px;
+
+    font-size: 7px;
+
+    color: var(--muted);
+
+    z-index: 10;
+}
+
+.legend i {
+    width: 5px;
+    height: 5px;
+
+    display: inline-block;
+
+    border-radius: 50%;
+
+    margin-right: 4px;
+}
+
+.legend .green {
+    background: var(--green);
+}
+
+.legend .yellow {
+    background: var(--yellow);
+}
+
+.legend .red {
+    background: var(--red);
+}
+
+
+/* ============================================
+   ACTIVITY FEED
+============================================ */
+
+.activity-list {
+    padding: 4px 18px;
+}
+
+.activity {
+    display: flex;
+
+    gap: 10px;
+
+    padding: 15px 0;
+
+    border-bottom:
+        1px solid rgba(255, 255, 255, 0.05);
+}
+
+.activity:last-child {
+    border-bottom: none;
+}
+
+.activity-icon {
+    width: 25px;
+    height: 25px;
+
+    flex-shrink: 0;
+
+    border-radius: 7px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 9px;
+}
+
+.activity.danger .activity-icon {
+    color: var(--red);
+
+    background:
+        rgba(237, 98, 91, 0.08);
+}
+
+.activity.warning .activity-icon {
+    color: var(--yellow);
+
+    background:
+        rgba(240, 195, 91, 0.08);
+}
+
+.activity.safe .activity-icon {
+    color: var(--green);
+
+    background:
+        rgba(98, 211, 148, 0.08);
+}
+
+.activity.info .activity-icon {
+    color: var(--blue);
+
+    background:
+        rgba(106, 167, 255, 0.08);
+}
+
+.activity-text strong {
+    display: block;
+
+    font-size: 9px;
+}
+
+.activity-text span {
+    display: block;
+
+    color: var(--muted);
+
+    font-size: 8px;
+
+    margin-top: 4px;
+}
+
+.activity-text small {
+    display: block;
+
+    color: #4c5753;
+
+    font-size: 7px;
+
+    margin-top: 4px;
+}
+
+.feed-footer {
+    width: 100%;
+    border: 0;
+    border-top:
+        1px solid var(--border);
+
+    padding: 12px;
+
+    text-align: center;
+
+    color: var(--muted);
+
+    font-size: 8px;
+    font-family: inherit;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.feed-footer:hover {
+    color: var(--saffron);
+
+    background:
+        rgba(244, 163, 64, 0.025);
+}
+
+
+/* ============================================
+   INSIGHTS
+============================================ */
+
+.insights {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 14px;
+}
+
+.insight {
+    min-height: 145px;
+
+    padding: 19px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 16px;
+
+    background: var(--card);
+
+    transition: 0.25s;
+}
+
+.insight:hover {
+    transform: translateY(-3px);
+
+    border-color:
+        rgba(255, 255, 255, 0.12);
+}
+
+.insight-tag {
+    color: var(--muted);
+
+    font-size: 7px;
+
+    letter-spacing: 1.5px;
+}
+
+.insight h4 {
+    font-size: 13px;
+
+    line-height: 1.35;
+
+    margin-top: 9px;
+}
+
+.insight p {
+    color: var(--muted);
+
+    font-size: 8px;
+
+    line-height: 1.6;
+
+    margin-top: 7px;
+}
+
+.insight a {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    color: var(--saffron);
+
+    font-size: 8px;
+
+    text-decoration: none;
+}
+
+.insight a:hover {
+    text-decoration: underline;
+}
+
+
+/* ============================================
+   FOOTER
+============================================ */
+
+.footer {
+    padding: 20px 32px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #46524e;
+
+    font-size: 8px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.03);
+}
+
+
+/* ============================================
+   ANIMATIONS
+============================================ */
+
+@keyframes pulse {
+
+    0% {
+        transform: scale(0.7);
+        opacity: 0.8;
+    }
+
+    70% {
+        transform: scale(2.1);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(2.1);
+        opacity: 0;
+    }
+}
+
+@keyframes livePulse {
+
+    0% {
+        box-shadow: 0 0 0 0 rgba(98, 211, 148, 0.5);
+    }
+
+    70% {
+        box-shadow: 0 0 0 7px rgba(98, 211, 148, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(98, 211, 148, 0);
+    }
+}
+
+
+/* ============================================
+   RESPONSIVE — TABLET
+============================================ */
+
+@media (max-width: 1100px) {
+
+    .kpi-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .insights {
+        grid-template-columns: 1fr;
+    }
+
+    .journey {
+        display: none;
+    }
+}
+
+
+/* ============================================
+   RESPONSIVE — MOBILE
+============================================ */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 70px;
+    }
+
+    .main {
+        margin-left: 70px;
+
+        width: calc(100% - 70px);
+    }
+
+    .logo {
+        justify-content: center;
+    }
+
+    .logo-title,
+    .logo-subtitle,
+    .nav-title,
+    .nav-item span:not(.nav-icon),
+    .ai-status-text,
+    .ai-online {
+        display: none;
+    }
+
+    .nav-item {
+        justify-content: center;
+    }
+
+    .ai-status {
+        justify-content: center;
+    }
+
+    .hero {
+        display: block;
+    }
+
+    .hero-button {
+        margin-top: 15px;
+    }
+
+    .wari-strip {
+        display: none;
+    }
+}
+
+
+/* ============================================
+   RESPONSIVE — SMALL MOBILE
+============================================ */
+
+@media (max-width: 500px) {
+
+    .content {
+        padding: 20px 15px;
+    }
+
+    .topbar {
+        padding: 0 15px;
+    }
+
+    .kpi-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile {
+        display: none;
+    }
+
+    .hero h2 {
+        font-size: 25px;
+    }
+
+    .footer {
+        padding: 20px 15px;
+
+        flex-direction: column;
+
+        gap: 7px;
+    }
+
+    .main-grid {
+        gap: 10px;
+    }
+
+    .panel {
+        border-radius: 12px;
+    }
+}
+/* Vigil AI controls and date selector */
+.wari-date-control{display:flex;flex-direction:column;gap:4px;padding:7px 9px;border:1px solid var(--border);border-radius:10px;background:rgba(255,255,255,.035);min-width:145px}
+.wari-date-control span,.wari-date-status small{font-size:9px;letter-spacing:1px;color:var(--muted);font-weight:700}
+.wari-date-control input{width:145px;max-width:100%;color:var(--text);background:transparent;border:0;outline:0;font:inherit;font-size:11px;color-scheme:dark}
+.wari-date-status{display:flex;flex-direction:column;gap:2px;max-width:145px}
+.wari-date-status strong{font-size:11px;color:var(--text)} .wari-date-status span{font-size:9px;color:var(--muted)}
+.avatar-ai-launcher{border:0;color:inherit;cursor:pointer;font:inherit}
+.avatar-ai-launcher:hover,.avatar-ai-launcher:focus-visible{outline:2px solid var(--saffron);outline-offset:3px}
+.vigil-fab{position:fixed;left:24px;bottom:24px;z-index:10002;width:58px;height:58px;border:1px solid rgba(255,255,255,.15);border-radius:50%;color:#07100e;background:linear-gradient(135deg,var(--saffron),var(--saffron-light));font-size:25px;box-shadow:0 6px 28px rgba(244,163,64,.35);cursor:pointer;transition:transform .2s ease,box-shadow .2s ease}
+.vigil-fab:hover{transform:translateY(-3px) scale(1.04);box-shadow:0 10px 36px rgba(244,163,64,.55)}
+.ai-assistant{color:var(--text);max-height:min(70vh,620px);overflow-y:auto;font-family:Arial,Helvetica,sans-serif}
+.ai-assistant .ai-header{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+.ai-assistant .ai-header small{display:block;color:var(--teal);font-size:10px;letter-spacing:1.4px;margin-bottom:4px}
+.ai-assistant .ai-header strong{font-size:15px}.ai-assistant .ai-close{border:0;background:transparent;color:var(--text);font-size:22px;cursor:pointer}
+.ai-assistant .ai-message,.ai-assistant .ai-response{padding:12px;border-radius:10px;background:rgba(255,255,255,.045);line-height:1.55;font-size:12px;margin-bottom:12px}
+.ai-assistant .ai-message p{margin-top:6px;color:var(--muted)}
+.ai-assistant .ai-actions{display:grid;grid-template-columns:1fr;gap:7px;margin-bottom:12px}
+.ai-assistant .ai-actions button,.ai-assistant .ai-input button{padding:9px 10px;border:1px solid rgba(69,199,180,.2);border-radius:8px;background:rgba(69,199,180,.08);color:var(--text);cursor:pointer;font-size:11px}
+.ai-assistant .ai-input{display:flex;gap:7px}.ai-assistant .ai-input input{min-width:0;flex:1;padding:10px;border:1px solid var(--border);border-radius:8px;background:rgba(255,255,255,.04);color:var(--text);outline:none}
+.ai-assistant .ai-input button{background:var(--saffron);color:#07100e}.ask-vigil-ai{cursor:pointer}
+@media(max-width:900px){.wari-date-status{display:none}.wari-date-control{min-width:120px}.wari-date-control input{width:120px}}
+@media(max-width:650px){.top-actions{flex-wrap:wrap;gap:8px}.wari-date-control{order:-1}.ai-assistant{left:12px!important;bottom:88px!important;width:calc(100vw - 24px)!important}.vigil-fab{left:16px;bottom:16px}}
+
+/* =========================================================
+   VIGIL AI — FIXED SIDEBAR POSITION
+   Sits permanently below Reports. Not draggable.
+========================================================= */
+.vigil-fab{
+    position:relative;
+    left:auto;
+    top:auto;
+    right:auto;
+    bottom:auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:48px;
+    height:48px;
+    margin:16px auto 0;
+    flex-shrink:0;
+    border:1px solid rgba(244,163,64,.28);
+    border-radius:50%;
+    color:#07100e;
+    background:linear-gradient(135deg,var(--saffron),var(--saffron-light));
+    font-size:22px;
+    box-shadow:0 6px 24px rgba(244,163,64,.35);
+    cursor:pointer;
+    touch-action:auto;
+    user-select:none;
+    transition:transform .2s ease,box-shadow .2s ease;
+    z-index:20;
+}
+.vigil-fab:hover{
+    transform:translateY(-2px) scale(1.04);
+    box-shadow:0 10px 30px rgba(244,163,64,.55);
+}
+.vigil-fab:focus-visible{
+    outline:2px solid var(--saffron-light);
+    outline-offset:3px;
+}
+
+.wari-marathi-tagline{
+    margin-top:5px;
+    color:#ffd36f;
+    font-size:12px;
+    letter-spacing:.25px;
+    white-space:nowrap;
+}
+.ai-assistant{
+    z-index:10001!important;
+}
+.ai-assistant .ai-input input{
+    font-size:12px!important;
+}
+@media(max-width:650px){
+    .vigil-fab{
+        margin:12px auto 0;
+    }
+    .wari-marathi-tagline{
+        font-size:11px;
+        white-space:normal;
+    }
+}
+
+/* Live signals modal */
+.signal-modal-list p {
+    padding: 11px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+    line-height: 1.55;
+}
+.signal-modal-list p:last-child { border-bottom: 0; }
+.signal-modal-list strong { font-size: 12px; }
+.signal-modal-list span { color: var(--muted); font-size: 10px; }
+
+/* Main workspace: slightly lighter green than the original sidebar. */
+.main {
+    background: #10221d;
+}
+
+/* Card headings use a subtle light-orange accent; card information remains unchanged. */
+.kpi-title,
+.panel-kicker,
+.insight-tag {
+    color: var(--saffron-light);
+}
+
+
+
+/* Final placement: persistent Vigil AI status bar at the bottom-left of the sidebar. */
+.ai-status {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 22px;
+}
+
+
+/* ============================================
+   FULL MAP MODAL
+============================================ */
+
+.full-map-modal-box {
+    width: 900px !important;
+    max-width: 92vw !important;
+    max-height: 88vh;
+    overflow-y: auto;
+}
+
+.full-map-intro {
+    margin: 0 0 16px;
+    color: rgba(255,255,255,0.58);
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+.full-map-display {
+    width: 100%;
+    height: 520px;
+    min-height: 520px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* =========================================================
+   FINAL CARD TYPOGRAPHY & COLOR ACCENTS
+   Keep the existing layout; only separate headings from
+   their main information with clear size/color hierarchy.
+========================================================= */
+
+/* KPI cards: each card gets its own heading + value accent pair. */
+.kpi:nth-child(6n+1) .kpi-title { color: #ffc56b; }
+.kpi:nth-child(6n+1) .kpi-value { color: #f4f6ef; }
+
+.kpi:nth-child(6n+2) .kpi-title { color: #65d9c4; }
+.kpi:nth-child(6n+2) .kpi-value { color: #b8f2e7; }
+
+.kpi:nth-child(6n+3) .kpi-title { color: #f5d36a; }
+.kpi:nth-child(6n+3) .kpi-value { color: #ffe6a1; }
+
+.kpi:nth-child(6n+4) .kpi-title { color: #ff9b92; }
+.kpi:nth-child(6n+4) .kpi-value { color: #ffd0cb; }
+
+.kpi:nth-child(6n+5) .kpi-title { color: #8fbaff; }
+.kpi:nth-child(6n+5) .kpi-value { color: #c9dcff; }
+
+.kpi:nth-child(6n) .kpi-title { color: #78dda0; }
+.kpi:nth-child(6n) .kpi-value { color: #c5f2d3; }
+
+.kpi-title {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.35px;
+}
+
+.kpi-value {
+    font-size: 34px;
+    line-height: 1.08;
+    font-weight: 800;
+}
+
+.kpi-value small {
+    font-size: .55em;
+    font-weight: 700;
+}
+
+.kpi-bottom {
+    font-size: 10px;
+    line-height: 1.35;
+}
+
+/* Larger feature cards such as Current Location / Warkaris / Temperature. */
+.feature-card:nth-child(6n+1) h3 { color: #ffc56b; }
+.feature-card:nth-child(6n+1) .feature-number { color: #f4f6ef; }
+
+.feature-card:nth-child(6n+2) h3 { color: #65d9c4; }
+.feature-card:nth-child(6n+2) .feature-number { color: #b8f2e7; }
+
+.feature-card:nth-child(6n+3) h3 { color: #f5d36a; }
+.feature-card:nth-child(6n+3) .feature-number { color: #ffe6a1; }
+
+.feature-card:nth-child(6n+4) h3 { color: #ff9b92; }
+.feature-card:nth-child(6n+4) .feature-number { color: #ffd0cb; }
+
+.feature-card:nth-child(6n+5) h3 { color: #8fbaff; }
+.feature-card:nth-child(6n+5) .feature-number { color: #c9dcff; }
+
+.feature-card:nth-child(6n) h3 { color: #78dda0; }
+.feature-card:nth-child(6n) .feature-number { color: #c5f2d3; }
+
+.feature-card h3 {
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: 800;
+}
+
+.feature-number {
+    font-size: 34px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.feature-card p {
+    font-size: 14px;
+    line-height: 1.55;
+    color: var(--muted);
+}
+
+/* Keep the Vigil AI monitoring bar permanently visible at the bottom-left. */
+.ai-status {
+    position: fixed !important;
+    left: 16px !important;
+    bottom: 22px !important;
+    width: 213px !important;
+    right: auto !important;
+    z-index: 1000 !important;
+    box-sizing: border-box;
+}
+
+/* Comfortable default reading scale — the website opens slightly larger without manual zoom controls. */
+body {
+    font-size: 16px;
+}
+.page-title {
+    font-size: 22px;
+}
+.card-title, .panel-title, .section-title {
+    line-height: 1.2;
+}
+
+/* Larger, more attractive Wari date selector. */
+.wari-date-control {
+    min-width: 190px;
+    gap: 6px;
+    padding: 9px 12px 10px;
+    border: 1px solid rgba(244, 163, 64, 0.38);
+    border-radius: 12px;
+    background: linear-gradient(135deg, rgba(244,163,64,.13), rgba(69,199,180,.08));
+    box-shadow: 0 6px 22px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.04);
+}
+.wari-date-control span {
+    font-size: 10px;
+    letter-spacing: 1.3px;
+    color: var(--saffron-light);
+}
+.wari-date-control input {
+    width: 166px;
+    height: 34px;
+    padding: 4px 8px;
+    border: 1px solid rgba(98,211,148,.25);
+    border-radius: 8px;
+    background: rgba(7,16,14,.55);
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    color-scheme: dark;
+    accent-color: var(--saffron);
+}
+.wari-date-control input:focus {
+    border-color: var(--saffron-light);
+    box-shadow: 0 0 0 3px rgba(244,163,64,.12);
+}
+.wari-date-status strong {
+    font-size: 13px;
+}
+.wari-date-status span {
+    font-size: 10px;
+}
+@media(max-width:900px){
+    .wari-date-control { min-width: 160px; }
+    .wari-date-control input { width: 140px; }
+}
+/* =========================================================
+   VARKARI VIGIL — SIDEBAR FONT SIZE
+   Only the left sidebar is enlarged.
+   Main dashboard remains unchanged.
+========================================================= */
+
+/* Sidebar navigation text */
+.sidebar .nav-item {
+    font-size: 16px;
+}
+
+/* Section headings:
+   INTELLIGENCE / RESPONSE / INSIGHTS */
+.sidebar .nav-title {
+    font-size: 12px;
+    letter-spacing: 3px;
+}
+
+/* Logo */
+.sidebar .logo-title {
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.sidebar .logo-subtitle {
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+/* Navigation icons */
+.sidebar .nav-icon {
+    font-size: 17px;
+}
+
+/* VIGIL AI bottom bar */
+.sidebar .ai-status {
+    cursor: pointer;
+    user-select: none;
+}
+
+/* VIGIL AI title */
+.sidebar .ai-status strong {
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* VIGIL AI subtitle */
+.sidebar .ai-status span {
+    font-size: 12px;
+}
+
+/* Small hover effect for the clickable AI bar */
+.sidebar .ai-status:hover {
+    border-color: rgba(255, 170, 60, 0.45);
+    transform: translateY(-1px);
+}
+
+/* Keyboard accessibility */
+.sidebar .ai-status:focus-visible {
+    outline: 2px solid rgba(255, 170, 60, 0.75);
+    outline-offset: 2px;
+}
+
+/* Make sure the old floating AI button cannot appear */
+.vigil-fab {
+    display: none !important;
+}
+
+/* =========================================================
+   FINAL READABILITY IMPROVEMENT
+   Only increases small supporting text and map labels.
+   No layout, colors or functionality are changed.
+========================================================= */
+
+.nav-title { font-size: 12px !important; }
+.nav-item { font-size: 16px !important; }
+.nav-icon { font-size: 17px !important; }
+
+.activity-text strong { font-size: 11px !important; }
+.activity-text span { font-size: 10px !important; }
+.activity-text small { font-size: 9px !important; }
+
+.insight-tag { font-size: 9px !important; }
+.insight p { font-size: 10px !important; }
+.insight a { font-size: 10px !important; }
+
+.panel-kicker { font-size: 10px !important; }
+.footer { font-size: 9px !important; }
+
+.map-label {
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.2px !important;
+    color: rgba(255,255,255,0.82) !important;
+    text-shadow: 0 1px 5px rgba(0,0,0,0.9);
+    z-index: 10 !important;
+}
+
+.legend {
+    font-size: 9px !important;
+}
+
+.feed-footer {
+    font-size: 10px !important;
+}
+
+.wari-date-control span { font-size: 10px !important; }
+.wari-date-status strong { font-size: 13px !important; }
+.wari-date-status span { font-size: 10px !important; }
+
+
+/* =========================================================
+   EXTRA READABILITY — LARGER TEXT
+   Only text sizes are increased. Existing layout/colors/
+   functionality are preserved.
+========================================================= */
+
+/* Sidebar */
+.sidebar .nav-item {
+    font-size: 18px !important;
+}
+
+.sidebar .nav-title {
+    font-size: 13px !important;
+    letter-spacing: 3px;
+}
+
+.sidebar .nav-icon {
+    font-size: 19px !important;
+}
+
+.sidebar .logo-title {
+    font-size: 24px !important;
+}
+
+.sidebar .logo-subtitle {
+    font-size: 13px !important;
+}
+
+/* Vigil AI bar */
+.sidebar .ai-status strong {
+    font-size: 16px !important;
+}
+
+.sidebar .ai-status span {
+    font-size: 13px !important;
+}
+
+/* Activity Feed / supporting information */
+.activity-text strong {
+    font-size: 13px !important;
+}
+
+.activity-text span {
+    font-size: 12px !important;
+}
+
+.activity-text small {
+    font-size: 11px !important;
+}
+
+/* Small labels and insights */
+.insight-tag {
+    font-size: 11px !important;
+}
+
+.insight p {
+    font-size: 12px !important;
+}
+
+.insight a {
+    font-size: 12px !important;
+}
+
+.panel-kicker {
+    font-size: 12px !important;
+}
+
+.footer {
+    font-size: 11px !important;
+}
+
+/* Map location names */
+.map-label {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+    letter-spacing: 1.3px !important;
+    color: rgba(255,255,255,0.90) !important;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.95);
+}
+
+/* Map legend */
+.map-legend {
+    font-size: 12px !important;
+}
+
+.map-legend span {
+    font-size: 12px !important;
+}
+
+/* =========================================================
+   FINAL FONT BALANCE — SIDEBAR SLIGHTLY SMALLER + BUTTONS LARGER
+========================================================= */
+
+
+/* Sidebar: slightly smaller than the previous 18px version */
+.sidebar .nav-item,
+.nav-item {
+    font-size: 16px !important;
+    line-height: 1.25 !important;
+}
+
+.sidebar .nav-title,
+.nav-title {
+    font-size: 12px !important;
+    letter-spacing: 2.8px !important;
+}
+
+.sidebar .nav-icon,
+.nav-icon {
+    font-size: 17px !important;
+}
+
+/* Keep the sidebar logo comfortable without making it oversized */
+.sidebar .logo-title,
+.logo-title {
+    font-size: 22px !important;
+}
+
+.sidebar .logo-subtitle,
+.logo-subtitle {
+    font-size: 12px !important;
+}
+
+/* =========================================================
+   FULL MAP →
+   Exact selector used by the dashboard HTML
+========================================================= */
+.panel-link {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.25px !important;
+    padding: 8px 11px !important;
+    white-space: nowrap !important;
+}
+
+/* =========================================================
+   VIEW ALL SIGNALS →
+   Exact selector used by the dashboard HTML
+========================================================= */
+.feed-footer {
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
+    min-height: 52px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+}
+
+/* =========================================================
+   Activity feed readability
+========================================================= */
+.activity-text strong {
+    font-size: 14px !important;
+    font-weight: 800 !important;
+}
+
+.activity-text span {
+    font-size: 13px !important;
+}
+
+.activity-text small {
+    font-size: 11px !important;
+}
+
+/* =========================================================
+   Bottom insight cards
+========================================================= */
+.insight-tag {
+    font-size: 12px !important;
+    font-weight: 700 !important;
+}
+
+.insight h4 {
+    font-size: 17px !important;
+    line-height: 1.4 !important;
+}
+
+.insight p {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+}
+
+.insight a {
+    font-size: 14px !important;
+    font-weight: 700 !important;
+}
+
+/* Map location names */
+.map-label {
+    font-size: 15px !important;
+    font-weight: 800 !important;
+    letter-spacing: 1.3px !important;
+    color: rgba(255,255,255,0.94) !important;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.95) !important;
+}
+
+/* Map legend */
+.legend,
+.map-legend,
+.legend span,
+.map-legend span {
+    font-size: 12px !important;
+}
+/* =========================================================
+   WARI JOURNEY STRIP — SLIGHTLY LARGER FONT
+   Everything else remains unchanged
+========================================================= */
+
+/* Wari Journey title */
+.wari-name small {
+    font-size: 11px !important;
+    letter-spacing: 1.7px !important;
+}
+
+.wari-name strong {
+    font-size: 15px !important;
+    margin-top: 4px !important;
+}
+
+
+/* Journey route labels:
+   Pune / Wakhri / Pandharpur */
+.journey-place {
+    font-size: 12px !important;
+    font-weight: 600 !important;
+}
+
+.journey-place span {
+    width: 9px !important;
+    height: 9px !important;
+}
+
+
+/* Day / Progress section */
+.journey-info small {
+    font-size: 11px !important;
+}
+
+.journey-info strong {
+    font-size: 16px !important;
+}
+
+
+/* Marathi Wari tagline */
+.wari-marathi-tagline {
+    font-size: 15px !important;
+}
+
+
+/* Slightly larger date/status text in the top Wari area */
+.wari-date-control span {
+    font-size: 10px !important;
+}
+
+.wari-date-status strong {
+    font-size: 14px !important;
+}
+
+.wari-date-status span {
+    font-size: 10px !important;
+}
+.footer {
+    display: none !important;
+}
+
+
+/* ============================================
+   VITTHAL DEVOTIONAL CARD — OVERVIEW HERO
+   Added as a small accent; existing dashboard styles remain intact.
+============================================ */
+#overview .hero {
+    align-items: center;
+    gap: 22px;
+    flex-wrap: wrap;
+}
+
+#overview .hero > div:first-child {
+    flex: 1 1 300px;
+    min-width: 0;
+}
+
+#overview .vitthal-card {
+    flex: 0 0 142px;
+    width: 142px;
+    margin-left: auto;
+    padding: 7px;
+    border: 1px solid rgba(218, 174, 91, 0.78);
+    border-radius: 16px;
+    background: linear-gradient(155deg, rgba(79, 27, 24, 0.96), rgba(34, 17, 16, 0.98));
+    box-shadow: 0 9px 26px rgba(0, 0, 0, 0.18), 0 0 22px rgba(218, 174, 91, 0.13);
+    text-align: center;
+    position: relative;
+    isolation: isolate;
+    transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+#overview .vitthal-card::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border: 1px solid rgba(218, 174, 91, 0.16);
+    border-radius: 19px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+#overview .vitthal-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.23), 0 0 28px rgba(218, 174, 91, 0.2);
+}
+
+#overview .vitthal-image-frame {
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid rgba(218, 174, 91, 0.28);
+    background: #24100e;
+}
+
+#overview .vitthal-card img {
+    display: block;
+    width: 100%;
+    height: 148px;
+    object-fit: cover;
+    object-position: center 28%;
+    transition: transform 350ms ease;
+}
+
+#overview .vitthal-card:hover img {
+    transform: scale(1.035);
+}
+
+#overview .vitthal-caption {
+    display: block;
+    margin-top: 8px;
+    color: #f0d18c;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.15px;
+    line-height: 1.5;
+}
+
+#overview .vitthal-subcaption {
+    display: block;
+    margin-top: 2px;
+    color: rgba(245, 224, 184, 0.7);
+    font-size: 8px;
+    letter-spacing: 0.7px;
+}
+
+@media (max-width: 700px) {
+    #overview .hero {
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    #overview .vitthal-card {
+        flex-basis: 112px;
+        width: 112px;
+        margin-left: 0;
+        margin-top: 3px;
+    }
+
+    #overview .vitthal-card img {
+        height: 118px;
+    }
+}
+
+@media (max-width: 500px) {
+    #overview .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 104px;
+        align-items: start;
+        column-gap: 12px;
+        row-gap: 12px;
+    }
+
+    #overview .hero > div:first-child {
+        grid-column: 1;
+    }
+
+    #overview .vitthal-card {
+        grid-column: 2;
+        grid-row: 1;
+        width: 104px;
+        flex-basis: auto;
+        padding: 5px;
+        margin: 0;
+        border-radius: 13px;
+    }
+
+    #overview .vitthal-card img {
+        height: 105px;
+    }
+
+    #overview .vitthal-caption {
+        font-size: 9px;
+    }
+
+    #overview .vitthal-subcaption {
+        font-size: 7px;
+    }
+
+    #overview .hero-button {
+        grid-column: 1 / -1;
+        justify-self: start;
+        margin-top: 0;
+    }
+
+    #overview .hero h2 {
+        font-size: clamp(20px, 5vw, 25px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    #overview .vitthal-card,
+    #overview .vitthal-card img {
+        transition: none;
+    }
+}
+
+
+
+/* ==========================================================
+   HYBRID UPGRADE — CINEMATIC SPIRITUAL LANDING + OPERATIONS UI
+   Appended overrides preserve the existing module layout.
+========================================================== */
+:root {
+    --bg: #160d0e;
+    --sidebar: #210f12;
+    --card: #291417;
+    --card-2: #32191b;
+    --border: rgba(230, 190, 111, 0.15);
+    --text: #fff7eb;
+    --muted: #c1a9a0;
+    --saffron: #f18a32;
+    --saffron-light: #ffc46d;
+    --green: #79c99a;
+    --teal: #78c7bb;
+    --yellow: #edc56f;
+    --red: #f0786d;
+    --blue: #8bb8f2;
+    --antique-gold: #d9b56d;
+    --deep-maroon: #210f12;
+}
+
+body {
+    background:
+        radial-gradient(ellipse at 78% 0%, rgba(121, 48, 28, 0.20), transparent 38%),
+        radial-gradient(ellipse at 12% 28%, rgba(105, 48, 34, 0.12), transparent 35%),
+        var(--bg);
+}
+
+.sidebar {
+    background: linear-gradient(180deg, #251013 0%, #190c0e 100%);
+    border-right-color: rgba(217, 181, 109, 0.17);
+    box-shadow: 8px 0 34px rgba(0, 0, 0, 0.12);
+}
+
+.logo-symbol {
+    border-color: rgba(217, 181, 109, 0.48);
+    color: var(--antique-gold);
+    background: radial-gradient(circle, rgba(241, 138, 50, 0.22), rgba(241, 138, 50, 0.015) 72%);
+    box-shadow: inset 0 0 18px rgba(217, 181, 109, 0.08);
+}
+
+.logo-subtitle,
+.nav-item.active .nav-icon,
+.hero-label {
+    color: var(--saffron-light);
+}
+
+.nav-item.active {
+    background: linear-gradient(90deg, rgba(241, 138, 50, 0.19), rgba(217, 181, 109, 0.035));
+    box-shadow: inset 3px 0 0 var(--saffron), 0 0 18px rgba(241, 138, 50, 0.045);
+}
+
+.main {
+    background: transparent;
+}
+
+.topbar {
+    border-bottom-color: rgba(217, 181, 109, 0.12);
+    background: rgba(22, 13, 14, 0.78);
+    backdrop-filter: blur(16px);
+}
+
+.page-kicker,
+.wari-date-control > span,
+.wari-date-status small {
+    color: #c5a777;
+}
+
+.wari-strip {
+    border-color: rgba(217, 181, 109, 0.15);
+    background: linear-gradient(110deg, rgba(75, 30, 27, 0.88), rgba(35, 17, 19, 0.90));
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.12);
+}
+
+.content {
+    position: relative;
+}
+
+.demo-notice {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 14px 28px 0;
+    padding: 10px 13px;
+    border: 1px solid rgba(217, 181, 109, 0.22);
+    border-radius: 11px;
+    background: linear-gradient(90deg, rgba(100, 47, 26, 0.30), rgba(51, 25, 25, 0.40));
+    color: #e9d7b8;
+    font-size: 10px;
+    line-height: 1.5;
+}
+.demo-notice strong {
+    color: #ffd18a;
+    font-size: 9px;
+    letter-spacing: 1.15px;
+}
+.demo-notice-dot {
+    width: 7px;
+    height: 7px;
+    flex: 0 0 7px;
+    border-radius: 50%;
+    background: #f0b14c;
+    box-shadow: 0 0 12px rgba(240, 177, 76, 0.5);
+}
+.live {
+    color: #ffd18a;
+    border-color: rgba(217, 181, 109, 0.26);
+    background: rgba(115, 60, 28, 0.22);
+    font-size: 9px;
+    letter-spacing: 1px;
+}
+.live-dot {
+    background: #e9a342;
+    box-shadow: 0 0 0 4px rgba(233, 163, 66, 0.10);
+    animation: demoPulse 2.5s ease-in-out infinite;
+}
+
+/* Cinematic hero stage */
+#overview .hero {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    align-items: center;
+    gap: 24px;
+    padding: clamp(24px, 3vw, 38px);
+    border: 1px solid rgba(217, 181, 109, 0.20);
+    border-radius: 24px;
+    background:
+        radial-gradient(ellipse at 78% 48%, rgba(204, 111, 38, 0.20), transparent 33%),
+        radial-gradient(ellipse at 90% 0%, rgba(217, 181, 109, 0.12), transparent 38%),
+        linear-gradient(118deg, rgba(61, 25, 26, 0.96), rgba(28, 15, 17, 0.98) 68%);
+    box-shadow: 0 22px 54px rgba(0, 0, 0, 0.22), inset 0 1px 0 rgba(255, 241, 209, 0.035);
+}
+
+#overview .hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    width: 340px;
+    height: 340px;
+    right: 2%;
+    top: -45%;
+    border-radius: 50%;
+    border: 1px solid rgba(217, 181, 109, 0.10);
+    background:
+        repeating-radial-gradient(circle, transparent 0 23px, rgba(217, 181, 109, 0.035) 24px 25px),
+        radial-gradient(circle, rgba(241, 138, 50, 0.08), transparent 68%);
+    box-shadow: 0 0 80px rgba(241, 138, 50, 0.06);
+    animation: heroHalo 22s linear infinite;
+    pointer-events: none;
+}
+
+#overview .hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(241, 138, 50, 0.72), rgba(217, 181, 109, 0.68), transparent);
+    opacity: 0.8;
+}
+
+#overview .hero > div:first-child {
+    flex: 1 1 360px;
+    min-width: 0;
+}
+
+#overview .hero-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 10px;
+    border: 1px solid rgba(217, 181, 109, 0.24);
+    border-radius: 999px;
+    background: rgba(241, 138, 50, 0.07);
+    letter-spacing: 1.8px;
+}
+#overview .hero-label::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--saffron);
+    box-shadow: 0 0 10px rgba(241, 138, 50, 0.65);
+}
+
+#overview .hero h2 {
+    max-width: 760px;
+    line-height: 1.13;
+    letter-spacing: -0.8px;
+    text-wrap: balance;
+}
+#overview .hero h2 span {
+    color: #efbd70;
+    text-shadow: 0 0 25px rgba(241, 138, 50, 0.12);
+}
+.hero-supporting-copy {
+    max-width: 590px;
+    margin-top: 15px;
+    color: #d5c0b3;
+    font-size: 13px;
+    line-height: 1.75;
+}
+.hero-proof-points {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 17px;
+}
+.hero-proof-points span {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 10px;
+    border: 1px solid rgba(217, 181, 109, 0.17);
+    border-radius: 999px;
+    background: rgba(255, 247, 235, 0.025);
+    color: #ead9c1;
+    font-size: 10px;
+    letter-spacing: 0.35px;
+}
+.hero-proof-points i {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--saffron-light);
+    box-shadow: 0 0 8px rgba(255, 196, 109, 0.45);
+}
+#overview .hero-button {
+    position: relative;
+    z-index: 2;
+    flex: 0 0 auto;
+    border: 1px solid rgba(255, 221, 161, 0.28);
+    background: linear-gradient(135deg, #f29a3e, #c86b2b);
+    color: #2c1412;
+    font-weight: 800;
+    box-shadow: 0 8px 22px rgba(191, 93, 34, 0.22);
+    transition: transform 200ms ease, box-shadow 200ms ease, filter 200ms ease;
+}
+#overview .hero-button:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.06);
+    box-shadow: 0 12px 27px rgba(191, 93, 34, 0.30);
+}
+
+/* Devotional portrait as a compact, dimensional accent */
+#overview .vitthal-card {
+    position: relative;
+    flex: 0 0 142px;
+    width: 142px;
+    margin-left: auto;
+    padding: 7px;
+    border: 1px solid rgba(230, 195, 120, 0.82);
+    border-radius: 17px;
+    background: linear-gradient(155deg, rgba(89, 38, 30, 0.98), rgba(28, 14, 15, 0.98));
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28), 0 0 25px rgba(217, 181, 109, 0.13);
+    text-align: center;
+    transition: transform 250ms ease, box-shadow 250ms ease;
+}
+#overview .vitthal-card::before {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    border: 1px solid rgba(217, 181, 109, 0.16);
+    border-radius: 21px;
+    pointer-events: none;
+}
+#overview .vitthal-card:hover {
+    transform: translateY(-4px) rotateY(-2deg);
+    box-shadow: 0 17px 36px rgba(0, 0, 0, 0.34), 0 0 32px rgba(217, 181, 109, 0.20);
+}
+#overview .vitthal-image-frame {
+    overflow: hidden;
+    border-radius: 11px;
+    border: 1px solid rgba(217, 181, 109, 0.30);
+    background: #24100e;
+}
+#overview .vitthal-card img {
+    display: block;
+    width: 100%;
+    height: 148px;
+    object-fit: cover;
+    object-position: center 28%;
+    transition: transform 400ms ease;
+}
+#overview .vitthal-card:hover img { transform: scale(1.045); }
+#overview .vitthal-caption {
+    display: block;
+    margin-top: 8px;
+    color: #f0d18c;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 1.5;
+}
+#overview .vitthal-subcaption {
+    display: block;
+    margin-top: 3px;
+    color: rgba(245, 224, 184, 0.68);
+    font-size: 8px;
+    letter-spacing: 0.6px;
+}
+
+.kpi, .feature-card, .chart-card, .panel, .module-card, .resource-card {
+    border-color: rgba(217, 181, 109, 0.13);
+}
+.kpi {
+    background: linear-gradient(150deg, rgba(58, 29, 29, 0.86), rgba(35, 19, 21, 0.94));
+    box-shadow: 0 9px 25px rgba(0, 0, 0, 0.10);
+    transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+.kpi:hover {
+    transform: translateY(-3px);
+    border-color: rgba(217, 181, 109, 0.34);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.17);
+}
+.feature-card, .chart-card, .panel, .module-card, .resource-card {
+    background: linear-gradient(145deg, rgba(53, 27, 29, 0.80), rgba(34, 18, 20, 0.94));
+}
+button, input, select, textarea {
+    accent-color: var(--saffron);
+}
+button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--antique-gold);
+    outline-offset: 3px;
+}
+.nav-item, .kpi, .feature-card, .chart-card, .panel, .module-card, .resource-card {
+    transition-timing-function: cubic-bezier(.2, .75, .25, 1);
+}
+.toast {
+    border: 1px solid rgba(217, 181, 109, 0.28);
+    background: #3a1d20;
+    color: #fff2dc;
+}
+
+@keyframes demoPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+}
+@keyframes heroHalo {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 900px) {
+    .demo-notice { margin-left: 18px; margin-right: 18px; }
+}
+@media (max-width: 700px) {
+    #overview .hero { padding: 22px; gap: 16px; }
+    #overview .vitthal-card { flex-basis: 112px; width: 112px; }
+    #overview .vitthal-card img { height: 118px; }
+    .hero-supporting-copy { font-size: 12px; }
+}
+@media (max-width: 500px) {
+    .demo-notice { margin: 12px 12px 0; font-size: 9px; }
+    #overview .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 96px;
+        align-items: start;
+        column-gap: 12px;
+        row-gap: 13px;
+        padding: 18px;
+    }
+    #overview .hero > div:first-child { grid-column: 1; }
+    #overview .vitthal-card {
+        grid-column: 2;
+        grid-row: 1;
+        width: 96px;
+        flex-basis: auto;
+        margin: 0;
+        padding: 5px;
+        border-radius: 13px;
+    }
+    #overview .vitthal-card img { height: 100px; }
+    #overview .vitthal-caption { font-size: 8px; }
+    #overview .vitthal-subcaption { font-size: 7px; }
+    #overview .hero-button { grid-column: 1 / -1; justify-self: start; }
+    #overview .hero h2 { font-size: clamp(19px, 5vw, 25px); }
+    .hero-proof-points { gap: 6px; }
+    .hero-proof-points span { padding: 6px 8px; font-size: 9px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+
+
+/* ============================================================
+   CINEMATIC TEMPLE SCENE + RESTORED MOTION POLISH
+   CSS-built layered temple scene: no external 3D library needed.
+============================================================ */
+#overview .hero {
+    --pointer-x: 0px;
+    --pointer-y: 0px;
+    background:
+        radial-gradient(circle at 78% 48%, rgba(220, 134, 55, 0.17), transparent 27%),
+        radial-gradient(circle at 85% 15%, rgba(231, 185, 101, 0.10), transparent 32%),
+        linear-gradient(118deg, rgba(61, 25, 26, 0.97), rgba(28, 15, 17, 0.98) 70%);
+}
+#overview .hero::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    width: auto;
+    height: auto;
+    right: auto;
+    top: auto;
+    border: 0;
+    border-radius: inherit;
+    background-image:
+        radial-gradient(circle, rgba(255, 202, 119, 0.62) 1px, transparent 1.8px),
+        radial-gradient(circle, rgba(245, 147, 57, 0.45) 1px, transparent 1.8px);
+    background-size: 43px 43px, 67px 67px;
+    background-position: 0 0, 19px 23px;
+    opacity: 0.24;
+    animation: dottedDrift 24s linear infinite;
+    pointer-events: none;
+}
+#overview .hero::after {
+    height: 2px;
+    opacity: 0.85;
+    background: linear-gradient(90deg, transparent, #d18a45, #f1d18b, #d46e34, transparent);
+    background-size: 220% 100%;
+    animation: goldLineFlow 6s linear infinite;
+}
+
+#overview .hero-visual-cluster {
+    position: relative;
+    flex: 0 1 390px;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    perspective: 900px;
+    transform: translate3d(calc(var(--pointer-x) * .45), calc(var(--pointer-y) * .45), 0);
+    transition: transform 180ms ease-out;
+    z-index: 1;
+}
+#overview .temple-scene {
+    position: relative;
+    flex: 1 1 225px;
+    min-width: 190px;
+    height: 220px;
+    overflow: hidden;
+    isolation: isolate;
+    transform-style: preserve-3d;
+    transform: translate3d(var(--pointer-x), var(--pointer-y), 0) rotateY(-7deg);
+    transition: transform 220ms ease-out, filter 250ms ease;
+    filter: drop-shadow(0 13px 19px rgba(0,0,0,.25));
+}
+#overview .temple-scene::before {
+    content: "";
+    position: absolute;
+    inset: 8% 4% 7%;
+    border-radius: 50%;
+    background: radial-gradient(ellipse, rgba(238, 167, 83, .22), rgba(166, 76, 39, .07) 42%, transparent 70%);
+    filter: blur(7px);
+    animation: auraBreathe 4.8s ease-in-out infinite;
+}
+#overview .temple-aura {
+    position: absolute;
+    width: 124px;
+    height: 124px;
+    left: 50%;
+    top: 20px;
+    border: 1px solid rgba(238, 192, 113, .62);
+    border-radius: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 28px rgba(237, 168, 79, .16), inset 0 0 24px rgba(237, 168, 79, .08);
+    animation: auraBreathe 5s ease-in-out infinite;
+}
+#overview .temple-rays {
+    position: absolute;
+    left: 50%;
+    top: 9px;
+    width: 205px;
+    height: 170px;
+    transform: translateX(-50%);
+    opacity: .33;
+    background: repeating-conic-gradient(from -4deg at 50% 50%, transparent 0deg 10deg, rgba(255, 200, 115, .14) 10.5deg 11.5deg, transparent 12deg 20deg);
+    mask-image: radial-gradient(ellipse, #000 0%, transparent 72%);
+    animation: rayTurn 45s linear infinite;
+}
+#overview .temple-orbit {
+    position: absolute;
+    left: 50%;
+    top: 74px;
+    width: 170px;
+    height: 44px;
+    border: 1px solid rgba(241, 194, 111, .33);
+    border-radius: 50%;
+    transform: translateX(-50%) rotate(-18deg);
+}
+#overview .orbit-two {
+    width: 196px;
+    height: 54px;
+    top: 84px;
+    transform: translateX(-50%) rotate(19deg);
+    border-color: rgba(222, 128, 60, .24);
+}
+#overview .temple-architecture {
+    position: absolute;
+    left: 50%;
+    bottom: 26px;
+    width: 190px;
+    height: 164px;
+    transform: translateX(-50%) translateZ(14px);
+    filter: drop-shadow(0 9px 10px rgba(0,0,0,.35));
+}
+#overview .temple-finial {
+    position: absolute;
+    z-index: 6;
+    left: 50%;
+    top: -2px;
+    width: 5px;
+    height: 22px;
+    border-radius: 4px 4px 0 0;
+    background: linear-gradient(90deg, #a96b31, #ffe0a0, #a96b31);
+    transform: translateX(-50%);
+}
+#overview .temple-finial::before {
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: -4px;
+    width: 13px;
+    height: 10px;
+    border-radius: 60% 60% 45% 45%;
+    background: radial-gradient(circle at 35% 25%, #fff0bf, #d28b3e 60%, #7a3b24);
+}
+#overview .temple-dome {
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    top: 15px;
+    width: 57px;
+    height: 47px;
+    transform: translateX(-50%);
+    border-radius: 50% 50% 7% 7%;
+    background: linear-gradient(90deg, #65351f, #e7b56d 48%, #7a3e24);
+    clip-path: polygon(50% 0, 65% 22%, 76% 50%, 100% 100%, 0 100%, 24% 50%, 35% 22%);
+    box-shadow: 0 0 19px rgba(242, 180, 94, .28);
+}
+#overview .temple-tier {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, #4b2220, #a85d36 30%, #e5b66d 50%, #87462a 74%, #3a1b1b);
+    border: 1px solid rgba(245, 203, 128, .5);
+    box-shadow: inset 0 2px 3px rgba(255, 224, 160, .16), 0 3px 7px rgba(0,0,0,.24);
+    clip-path: polygon(14% 0, 86% 0, 100% 100%, 0 100%);
+}
+#overview .tier-top { z-index: 3; top: 43px; width: 100px; height: 24px; }
+#overview .tier-mid { z-index: 2; top: 62px; width: 143px; height: 24px; clip-path: polygon(10% 0, 90% 0, 100% 100%, 0 100%); }
+#overview .tier-low { z-index: 1; top: 81px; width: 176px; height: 25px; clip-path: polygon(7% 0, 93% 0, 100% 100%, 0 100%); }
+#overview .temple-pillars {
+    position: absolute;
+    z-index: 4;
+    left: 23px;
+    right: 23px;
+    top: 99px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+#overview .temple-pillars span {
+    width: 10px;
+    border: 1px solid rgba(244, 204, 134, .66);
+    background: linear-gradient(90deg, #4a211d, #d29a56 45%, #5d2a20);
+    box-shadow: 0 0 8px rgba(235, 163, 78, .12);
+}
+#overview .temple-sanctum {
+    position: absolute;
+    z-index: 3;
+    left: 44px;
+    right: 44px;
+    top: 101px;
+    height: 39px;
+    border: 1px solid rgba(232, 184, 105, .68);
+    background: linear-gradient(90deg, rgba(55, 20, 20, .96), rgba(128, 55, 31, .96), rgba(48, 18, 20, .96));
+    box-shadow: inset 0 0 15px rgba(255, 177, 83, .11);
+}
+#overview .sanctum-door {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 23px;
+    height: 31px;
+    transform: translateX(-50%);
+    border: 1px solid rgba(255, 204, 119, .7);
+    border-bottom: 0;
+    border-radius: 13px 13px 0 0;
+    background: linear-gradient(180deg, rgba(241, 169, 80, .38), rgba(29, 12, 14, .9));
+}
+#overview .sanctum-light {
+    position: absolute;
+    left: 50%;
+    bottom: 1px;
+    width: 38px;
+    height: 32px;
+    transform: translateX(-50%);
+    background: radial-gradient(ellipse at bottom, rgba(255, 185, 84, .38), transparent 68%);
+    animation: auraBreathe 3.2s ease-in-out infinite;
+}
+#overview .temple-steps {
+    position: absolute;
+    z-index: 5;
+    left: 50%;
+    height: 7px;
+    border: 1px solid rgba(230, 183, 107, .62);
+    background: linear-gradient(90deg, #4a211e, #d3a05c, #57281f);
+    transform: translateX(-50%);
+}
+#overview .step-one { top: 138px; width: 118px; }
+#overview .step-two { top: 145px; width: 144px; }
+#overview .step-three { top: 152px; width: 166px; }
+#overview .temple-ground-glow {
+    position: absolute;
+    left: 10%;
+    right: 10%;
+    bottom: 17px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(234, 146, 62, .34);
+    filter: blur(11px);
+    animation: groundGlow 3.8s ease-in-out infinite;
+}
+#overview .temple-spark {
+    position: absolute;
+    z-index: 7;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #ffd88c;
+    box-shadow: 0 0 9px 2px rgba(255, 183, 78, .58);
+    animation: sparkFloat 4s ease-in-out infinite;
+}
+#overview .spark-one { left: 16%; top: 32%; animation-delay: -.5s; }
+#overview .spark-two { left: 78%; top: 24%; animation-delay: -2s; }
+#overview .spark-three { left: 25%; top: 67%; animation-delay: -1.4s; }
+#overview .spark-four { left: 84%; top: 61%; animation-delay: -2.7s; }
+#overview .spark-five { left: 52%; top: 15%; animation-delay: -3.2s; }
+#overview .temple-scene-caption {
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: rgba(240, 198, 127, .68);
+    font-size: 7px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+}
+#overview .vitthal-card {
+    flex: 0 0 122px;
+    width: 122px;
+    margin: 0;
+    transform: translate3d(calc(var(--pointer-x) * -.35), calc(var(--pointer-y) * -.35), 0);
+}
+#overview .vitthal-card img { height: 138px; }
+
+@keyframes dottedDrift {
+    0% { background-position: 0 0, 19px 23px; }
+    100% { background-position: 86px 43px, -48px 90px; }
+}
+@keyframes goldLineFlow {
+    0% { background-position: 100% 0; }
+    100% { background-position: -120% 0; }
+}
+@keyframes auraBreathe {
+    0%, 100% { opacity: .52; filter: brightness(.9); }
+    50% { opacity: 1; filter: brightness(1.22); }
+}
+@keyframes rayTurn {
+    from { transform: translateX(-50%) rotate(0deg); }
+    to { transform: translateX(-50%) rotate(360deg); }
+}
+@keyframes sparkFloat {
+    0%, 100% { opacity: .22; transform: translate3d(0, 7px, 0) scale(.75); }
+    50% { opacity: 1; transform: translate3d(5px, -10px, 0) scale(1.25); }
+}
+@keyframes groundGlow {
+    0%, 100% { opacity: .42; transform: scaleX(.8); }
+    50% { opacity: .9; transform: scaleX(1.08); }
+}
+
+/* Restore visible but refined motion on KPI and dashboard cards */
+#overview .kpi,
+.kpi, .feature-card, .chart-card, .panel, .module-card, .resource-card,
+[class*="card"]:not(.vitthal-card) {
+    transition: transform 240ms cubic-bezier(.2,.75,.25,1),
+                border-color 240ms ease,
+                box-shadow 240ms ease,
+                background-color 240ms ease;
+}
+#overview .kpi:hover, .kpi:hover, .feature-card:hover, .chart-card:hover,
+.panel:hover, .module-card:hover, .resource-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(226, 180, 99, .34);
+    box-shadow: 0 14px 30px rgba(0,0,0,.22), 0 0 18px rgba(218,153,68,.055);
+}
+#overview .kpi { animation: cardRise .65s both; }
+#overview .kpi:nth-child(2) { animation-delay: .07s; }
+#overview .kpi:nth-child(3) { animation-delay: .14s; }
+#overview .kpi:nth-child(4) { animation-delay: .21s; }
+@keyframes cardRise {
+    from { opacity: .45; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 1100px) {
+    #overview .hero-visual-cluster { flex-basis: 330px; min-width: 285px; }
+    #overview .temple-scene { min-width: 165px; height: 200px; }
+    #overview .temple-architecture { transform: translateX(-50%) translateZ(14px) scale(.9); transform-origin: bottom center; }
+    #overview .vitthal-card { flex-basis: 112px; width: 112px; }
+    #overview .vitthal-card img { height: 124px; }
+}
+@media (max-width: 700px) {
+    #overview .hero-visual-cluster {
+        flex: 1 1 100%;
+        width: 100%;
+        min-width: 0;
+        max-width: 390px;
+        margin: 4px auto 0;
+    }
+    #overview .temple-scene { min-width: 0; height: 190px; }
+    #overview .temple-architecture { transform: translateX(-50%) translateZ(14px) scale(.86); }
+    #overview .vitthal-card { flex-basis: 112px; width: 112px; }
+    #overview .vitthal-card img { height: 126px; }
+    #overview .hero-button { margin-left: 0; }
+}
+@media (max-width: 420px) {
+    #overview .hero-visual-cluster { gap: 3px; }
+    #overview .temple-scene { height: 170px; }
+    #overview .temple-architecture { transform: translateX(-50%) translateZ(14px) scale(.76); }
+    #overview .vitthal-card { flex-basis: 100px; width: 100px; }
+    #overview .vitthal-card img { height: 112px; }
+    #overview .temple-scene-caption { font-size: 6px; letter-spacing: 1px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    #overview .hero::before, #overview .hero::after,
+    #overview .temple-scene *, #overview .temple-scene,
+    #overview .kpi, .kpi, .feature-card, .chart-card, .panel,
+    .module-card, .resource-card {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+
+/* ============================================================
+   FINAL POLISH — TEMPLE LIGHT SWEEP, AMBIENT DEPTH & ALERT PULSE
+   Added on top of the existing hybrid cinematic dashboard.
+============================================================ */
+#overview .temple-scene {
+    border-radius: 18px;
+    transform-style: preserve-3d;
+}
+#overview .temple-scene::after {
+    content: "";
+    position: absolute;
+    z-index: 8;
+    top: -25%;
+    left: -55%;
+    width: 34%;
+    height: 150%;
+    pointer-events: none;
+    transform: rotate(19deg);
+    background: linear-gradient(90deg, transparent, rgba(255, 225, 164, .16), rgba(255, 245, 208, .36), transparent);
+    filter: blur(3px);
+    animation: templeLightSweep 8s ease-in-out infinite;
+}
+#overview .temple-architecture {
+    animation: templeFloat 6s ease-in-out infinite;
+}
+#overview .temple-aura {
+    box-shadow: 0 0 34px rgba(237, 168, 79, .20),
+                inset 0 0 28px rgba(237, 168, 79, .10);
+}
+#overview .temple-scene:hover {
+    filter: drop-shadow(0 14px 25px rgba(230, 150, 62, .20));
+}
+#overview .vitthal-card {
+    transition: transform 280ms ease, filter 280ms ease;
+    filter: drop-shadow(0 8px 18px rgba(0, 0, 0, .20));
+}
+#overview .vitthal-card:hover {
+    filter: drop-shadow(0 10px 22px rgba(231, 168, 79, .22));
+}
+#overview .vitthal-card img {
+    transition: transform 350ms ease, filter 350ms ease;
+}
+#overview .vitthal-card:hover img {
+    transform: scale(1.025);
+    filter: saturate(1.08) contrast(1.03);
+}
+
+/* Gentle edge light on dashboard cards, without making the UI flashy. */
+.kpi {
+    position: relative;
+    overflow: hidden;
+}
+.kpi::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: inherit;
+    opacity: 0;
+    background: linear-gradient(115deg, transparent 15%, rgba(245, 190, 103, .065) 48%, transparent 72%);
+    transform: translateX(-60%);
+    transition: opacity 220ms ease;
+}
+.kpi:hover::after {
+    opacity: 1;
+    animation: cardLightSweep 1.1s ease forwards;
+}
+/* Fourth KPI is the active-alert card in the existing overview. */
+.kpi-grid .kpi:nth-child(4) .kpi-symbol {
+    animation: alertHalo 3.2s ease-in-out infinite;
+}
+.kpi-grid .kpi:nth-child(4) .kpi-value {
+    text-shadow: 0 0 17px rgba(224, 104, 83, .10);
+}
+@keyframes templeLightSweep {
+    0%, 12% { left: -55%; opacity: 0; }
+    20% { opacity: .7; }
+    45% { left: 125%; opacity: 0; }
+    100% { left: 125%; opacity: 0; }
+}
+@keyframes templeFloat {
+    0%, 100% { margin-bottom: 0; }
+    50% { margin-bottom: 3px; }
+}
+@keyframes cardLightSweep {
+    from { transform: translateX(-60%); }
+    to { transform: translateX(220%); }
+}
+@keyframes alertHalo {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(224, 104, 83, 0); }
+    50% { box-shadow: 0 0 0 5px rgba(224, 104, 83, .07); }
+}
+
+/* Keep the temple scene tidy on narrow screens and avoid motion for users who opt out. */
+@media (max-width: 700px) {
+    #overview .temple-scene::after { animation-duration: 10s; }
+    #overview .temple-architecture { animation-duration: 7s; }
+    .kpi:hover { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+    #overview .temple-scene::after,
+    #overview .temple-architecture,
+    #overview .vitthal-card,
+    #overview .vitthal-card img,
+    .kpi::after,
+    .kpi-grid .kpi:nth-child(4) .kpi-symbol {
+        animation: none !important;
+        transition: none !important;
+    }
+}

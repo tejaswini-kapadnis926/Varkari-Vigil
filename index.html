@@ -1,0 +1,2087 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Varkari Vigil - Intelligent Wari Safety Platform">
+
+    <title>Varkari Vigil | Wari Intelligence</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <style>
+        /* =========================================
+           PAGE NAVIGATION
+        ========================================= */
+
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
+        }
+
+        /* Page placeholder styling */
+        .dashboard-page {
+            padding: 10px 0 30px;
+        }
+
+        .dashboard-page h1 {
+            margin-bottom: 10px;
+        }
+
+        .dashboard-page > p {
+            margin-bottom: 25px;
+            opacity: 0.7;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .feature-card {
+            padding: 25px;
+            border-radius: 16px;
+            background: rgba(255,255,255,0.04);
+            border: 1px solid #1e1a1a14;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            opacity: 0.7;
+            line-height: 1.6;
+        }
+
+        .feature-number {
+            font-size: 30px;
+            font-weight: 700;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 900px) {
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+
+<div class="app">
+
+
+    <!-- =================================
+         SIDEBAR
+    ================================== -->
+
+   <!-- =================================
+     SIDEBAR
+================================== -->
+
+<aside class="sidebar">
+
+
+    <!-- LOGO -->
+
+    <div class="logo">
+
+        <div class="logo-symbol">
+            ॥
+        </div>
+
+        <div>
+
+            <div class="logo-title">
+                VARKARI
+            </div>
+
+            <span class="logo-subtitle">
+                VIGIL
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- NAVIGATION -->
+
+    <nav>
+
+
+        <div class="nav-title">
+            INTELLIGENCE
+        </div>
+
+
+        <!-- OVERVIEW -->
+
+        <a href="#overview"
+           class="nav-item active"
+           data-page="overview">
+
+            <span class="nav-icon">
+                ⌂
+            </span>
+
+            <span>
+                Overview
+            </span>
+
+        </a>
+
+
+        <!-- LIVE WARI -->
+
+        <a href="#live-wari"
+           class="nav-item"
+           data-page="live-wari">
+
+            <span class="nav-icon">
+                ◉
+            </span>
+
+            <span>
+                Live Wari
+            </span>
+
+        </a>
+
+
+        <!-- CROWD INTELLIGENCE -->
+
+        <a href="#crowd-intelligence"
+           class="nav-item"
+           data-page="crowd-intelligence">
+
+            <span class="nav-icon">
+                ◌
+            </span>
+
+            <span>
+                Crowd Intelligence
+            </span>
+
+        </a>
+
+
+        <!-- HEALTH & SAFETY -->
+
+        <a href="#health-safety"
+           class="nav-item"
+           data-page="health-safety">
+
+            <span class="nav-icon">
+                ♡
+            </span>
+
+            <span>
+                Health & Safety
+            </span>
+
+        </a>
+
+
+        <div class="nav-title space">
+            RESPONSE
+        </div>
+
+
+        <!-- RISK PREDICTION -->
+
+        <a href="#risk-prediction"
+           class="nav-item"
+           data-page="risk-prediction">
+
+            <span class="nav-icon">
+                ⌁
+            </span>
+
+            <span>
+                Risk Prediction
+            </span>
+
+        </a>
+
+
+        <!-- RESOURCE NETWORK -->
+
+        <a href="#resource-network"
+           class="nav-item"
+           data-page="resource-network">
+
+            <span class="nav-icon">
+                +
+            </span>
+
+            <span>
+                Resource Network
+            </span>
+
+        </a>
+
+
+        <!-- EMERGENCY HUB -->
+
+        <a href="#emergency-hub"
+           class="nav-item"
+           data-page="emergency-hub">
+
+            <span class="nav-icon">
+                !
+            </span>
+
+            <span>
+                Emergency Hub
+            </span>
+
+        </a>
+
+
+        <div class="nav-title space">
+            INSIGHTS
+        </div>
+
+
+        <!-- REPORTS -->
+
+        <a href="#reports"
+           class="nav-item"
+           data-page="reports">
+
+            <span class="nav-icon">
+                ▤
+            </span>
+
+            <span>
+                Reports
+            </span>
+
+        </a>
+
+
+    </nav>
+
+
+    <!-- =========================================
+         VIGIL AI STATUS BAR
+         No floating button.
+         Entire bar opens Vigil AI.
+    ========================================== -->
+
+    <div class="ai-status"
+         id="vigilAIStatus"
+         data-ai
+         role="button"
+         tabindex="0"
+         aria-label="Open Vigil AI assistant"
+         title="Open Vigil AI">
+
+
+        <div class="ai-orb"
+             aria-hidden="true">
+        </div>
+
+
+        <div class="ai-status-text">
+
+            <strong>
+                VIGIL AI
+            </strong>
+
+            <span>
+                Monitoring Wari
+            </span>
+
+        </div>
+
+
+        <div class="ai-online"
+             aria-label="Vigil AI online">
+        </div>
+
+
+    </div>
+
+
+</aside>
+
+
+
+    <!-- =================================
+         MAIN
+    ================================== -->
+
+    <main class="main">
+
+
+        <!-- TOPBAR -->
+
+        <header class="topbar">
+
+
+            <div>
+
+                <div class="page-kicker">
+                    WARI INTELLIGENCE SYSTEM
+                </div>
+
+                <div class="page-title"
+                     id="pageTitle">
+                    Overview
+                </div>
+
+            </div>
+
+
+            <div class="top-actions">
+
+                <label class="wari-date-control" for="wariDate">
+                    <span>WARI DATE · 2026</span>
+                    <input id="wariDate" type="date" min="2026-07-07" max="2026-07-30"
+                           value="2026-07-25" aria-label="Select a date during the 2026 Wari">
+                </label>
+                <div class="wari-date-status">
+                    <small>DATA VIEW</small>
+                    <strong id="selectedWariDateLabel">25 Jul 2026</strong>
+                    <span id="wariDataMode">Illustrative demo snapshot</span>
+                </div>
+
+                <div class="live">
+
+                    <span class="live-dot"></span>
+
+                    DEMO MODE
+
+                </div>
+
+
+                <div class="clock"
+                     id="clock">
+
+                    00:00:00
+
+                </div>
+
+
+                <button class="notification"
+                        type="button">
+
+                    ♧
+
+                </button>
+
+
+                <div class="profile">
+
+                    <div class="avatar" aria-label="Varkari Vigil Control Center" title="Varkari Vigil">VV</div>
+
+                    <div>
+
+                        <strong>
+                            Control Center
+                        </strong>
+
+                        <span>
+                            Operations
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =================================
+             WARI JOURNEY
+        ================================== -->
+
+        <section class="wari-strip">
+
+
+            <div class="wari-name">
+
+                <div class="tilak">
+                    |
+                </div>
+
+                <div>
+
+                    <small>
+                        PANDHARPUR WARI
+                    </small>
+
+                    <strong>
+                        Wari Journey · Demo Monitoring
+                    </strong>
+
+                    <div class="wari-marathi-tagline">🙏 विठ्ठल विठ्ठल जय हरी विठ्ठल</div>
+
+                </div>
+
+            </div>
+
+
+            <div class="journey">
+
+
+                <div class="journey-place done">
+
+                    <span></span>
+
+                    Pune
+
+                </div>
+
+
+                <div class="journey-line active"></div>
+
+
+                <div class="journey-place current">
+
+                    <span></span>
+
+                    Wakhri
+
+                </div>
+
+
+                <div class="journey-line"></div>
+
+
+                <div class="journey-place">
+
+                    <span></span>
+
+                    Pandharpur
+
+                </div>
+
+
+            </div>
+
+
+            <div class="journey-info">
+
+                <small>
+                    DAY
+                </small>
+
+                <strong>
+                    18
+                </strong>
+
+                <small>
+                    ·
+                </small>
+
+                <small>
+                    PROGRESS
+                </small>
+
+                <strong>
+                    68%
+                </strong>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- =================================
+             CONTENT
+        ================================== -->
+
+        <div class="demo-notice" role="note">
+            <span class="demo-notice-dot" aria-hidden="true"></span>
+            <strong>PROTOTYPE · SIMULATED DATA</strong>
+            <span>Metrics and risk indicators are illustrative and are not official live measurements.</span>
+        </div>
+
+        <div class="content">
+
+
+            <!-- =====================================================
+                 PAGE 1 — OVERVIEW
+            ====================================================== -->
+
+            <section id="overview"
+                     class="page-section active">
+
+
+                <!-- HERO -->
+
+                <section class="hero">
+
+
+                    <div>
+
+                        <div class="hero-label">
+                            SYSTEM OVERVIEW
+                        </div>
+
+                        <h2>
+
+                            Understanding the Wari,
+
+                            <span>
+                                before problems become emergencies.
+                            </span>
+
+                        </h2>
+
+                        <p class="hero-supporting-copy">
+                            A spiritual-tech prototype for safer journeys, coordinated seva and informed response.
+                        </p>
+                        <div class="hero-proof-points" aria-label="Platform capabilities">
+                            <span><i aria-hidden="true"></i> Observe</span>
+                            <span><i aria-hidden="true"></i> Assess</span>
+                            <span><i aria-hidden="true"></i> Respond</span>
+                        </div>
+
+
+                        
+
+                    </div>
+
+
+                    <div class="hero-visual-cluster" aria-label="Animated temple and Shri Vitthal">
+                        <div class="temple-scene" aria-hidden="true">
+                            <div class="temple-aura"></div>
+                            <div class="temple-rays"></div>
+                            <div class="temple-orbit orbit-one"></div>
+                            <div class="temple-orbit orbit-two"></div>
+                            <div class="temple-spark spark-one"></div>
+                            <div class="temple-spark spark-two"></div>
+                            <div class="temple-spark spark-three"></div>
+                            <div class="temple-spark spark-four"></div>
+                            <div class="temple-spark spark-five"></div>
+                            <div class="temple-ground-glow"></div>
+                            <div class="temple-architecture">
+                                <div class="temple-finial"></div>
+                                <div class="temple-dome"></div>
+                                <div class="temple-tier tier-top"></div>
+                                <div class="temple-tier tier-mid"></div>
+                                <div class="temple-tier tier-low"></div>
+                                <div class="temple-pillars">
+                                    <span></span><span></span><span></span><span></span>
+                                </div>
+                                <div class="temple-sanctum">
+                                    <div class="sanctum-door"></div>
+                                    <div class="sanctum-light"></div>
+                                </div>
+                                <div class="temple-steps step-one"></div>
+                                <div class="temple-steps step-two"></div>
+                                <div class="temple-steps step-three"></div>
+                            </div>
+                            <span class="temple-scene-caption">PANDHARPUR · WARI SAFETY</span>
+                        </div>
+                        <aside class="vitthal-card" aria-label="Shri Vitthal devotional image">
+                            <div class="vitthal-image-frame">
+                                <img src="assets/vitthal.png" alt="Shri Vitthal of Pandharpur"
+                                     loading="lazy">
+                            </div>
+                            <span class="vitthal-caption">॥ श्री विठ्ठल रखुमाई ॥</span>
+                            <span class="vitthal-subcaption">Mauli • Seva • Suraksha</span>
+                        </aside>
+                    </div>
+
+                    <button class="hero-button" id="exploreLiveWari" type="button">
+
+                        Explore Wari Dashboard →
+
+                    </button>
+
+
+                
+
+
+                </section>
+
+
+
+                <!-- KPI CARDS -->
+
+                <section class="kpi-grid">
+
+
+                    <!-- WARKARIS -->
+
+                    <article class="kpi">
+
+                        <div class="kpi-header">
+
+                            <span class="kpi-title">
+                                WARKARIS ON ROUTE
+                            </span>
+
+                            <span class="kpi-symbol orange">
+                                ◉
+                            </span>
+
+                        </div>
+
+                        <div class="kpi-value" id="overviewPilgrimsValue">
+                            1.18M
+                        </div>
+
+                        <div class="kpi-bottom">
+
+                            <span class="up">
+                                ↑ 4.8%
+                            </span>
+
+                            <span>
+                                vs previous update
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- CROWD -->
+
+                    <article class="kpi">
+
+                        <div class="kpi-header">
+
+                            <span class="kpi-title">
+                                CROWD DENSITY
+                            </span>
+
+                            <span class="kpi-symbol teal">
+                                ◌
+                            </span>
+
+                        </div>
+
+                        <div class="kpi-value" id="overviewCrowdValue"
+                             >
+
+                            72<small>%</small>
+
+                        </div>
+
+                        <div class="kpi-bottom">
+
+                            <span class="high">
+                                ELEVATED
+                            </span>
+
+                            <span>
+                                current condition
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- HEAT -->
+
+                    <article class="kpi">
+
+                        <div class="kpi-header">
+
+                            <span class="kpi-title">
+                                HEAT INDEX
+                            </span>
+
+                            <span class="kpi-symbol yellow">
+                                ◐
+                            </span>
+
+                        </div>
+
+                        <div class="kpi-value">
+
+                            38<small>°C</small>
+
+                        </div>
+
+                        <div class="kpi-bottom">
+
+                            <span class="high">
+                                HIGH
+                            </span>
+
+                            <span>
+                                next 2 hours
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ALERTS -->
+
+                    <article class="kpi">
+
+                        <div class="kpi-header">
+
+                            <span class="kpi-title">
+                                ACTIVE ALERTS
+                            </span>
+
+                            <span class="kpi-symbol red">
+                                !
+                            </span>
+
+                        </div>
+
+                        <div class="kpi-value" id="overviewAlertsValue">
+                            08
+                        </div>
+
+                        <div class="kpi-bottom">
+
+                            <span class="critical">
+                                02 critical
+                            </span>
+
+                            <span>
+                                06 warnings
+                            </span>
+
+                        </div>
+
+                    </article>
+
+
+                </section>
+
+
+
+                <!-- MAP + ACTIVITY -->
+
+                <section class="main-grid">
+
+
+                    <!-- MAP -->
+
+                    <article class="panel">
+
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <div class="panel-kicker">
+                                    GEOSPATIAL INTELLIGENCE
+                                </div>
+
+                                <div class="panel-title">
+                                    Live Wari Situation
+                                </div>
+
+                            </div>
+
+
+                            <button class="panel-link"
+                                    type="button"
+                                    onclick="openFullMap()">
+
+                                Full Map →
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="map">
+
+
+                            <!-- ROUTES -->
+
+                            <div class="route one"></div>
+
+                            <div class="route two"></div>
+
+                            <div class="route three"></div>
+
+
+                            <!-- ZONES -->
+
+                            <button class="zone one warning"
+                                    data-name="Wakhri"
+                                    type="button">
+                            </button>
+
+
+                            <button class="zone two danger"
+                                    data-name="Chandrabhaga"
+                                    type="button">
+                            </button>
+
+
+                            <button class="zone three"
+                                    data-name="Temple Zone"
+                                    type="button">
+                            </button>
+
+
+                            <button class="zone four warning"
+                                    data-name="Pandharpur"
+                                    type="button">
+                            </button>
+
+
+                            <!-- LABELS -->
+
+                            <span class="map-label label-one">
+                                WAKHRI
+                            </span>
+
+                            <span class="map-label label-two">
+                                CHANDRABHAGA
+                            </span>
+
+                            <span class="map-label label-three">
+                                TEMPLE
+                            </span>
+
+                            <span class="map-label label-four">
+                                PANDHARPUR
+                            </span>
+
+
+                            <!-- LEGEND -->
+
+                            <div class="legend">
+
+                                <span>
+                                    <i class="green"></i>
+                                    Stable
+                                </span>
+
+                                <span>
+                                    <i class="yellow"></i>
+                                    Watch
+                                </span>
+
+                                <span>
+                                    <i class="red"></i>
+                                    Critical
+                                </span>
+
+                            </div>
+
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ACTIVITY -->
+
+                    <article class="panel">
+
+
+                        <div class="panel-header">
+
+                            <div>
+
+                                <div class="panel-kicker">
+                                    LIVE SIGNALS
+                                </div>
+
+                                <div class="panel-title">
+                                    Activity Feed
+                                </div>
+
+                            </div>
+
+
+                            <span class="live">
+
+                                <span class="live-dot"></span>
+
+                                LIVE
+
+                            </span>
+
+                        </div>
+
+
+                        <div class="activity-list">
+
+
+                            <!-- ALERT -->
+
+                            <div class="activity danger">
+
+                                <div class="activity-icon">
+                                    !
+                                </div>
+
+                                <div class="activity-text">
+
+                                    <strong>
+                                        Crowd pressure detected
+                                    </strong>
+
+                                    <span>
+                                        Chandrabhaga Ghat
+                                    </span>
+
+                                    <small>
+                                        2 min ago
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- WARNING -->
+
+                            <div class="activity warning">
+
+                                <div class="activity-icon">
+                                    ≈
+                                </div>
+
+                                <div class="activity-text">
+
+                                    <strong>
+                                        Hydration demand rising
+                                    </strong>
+
+                                    <span>
+                                        Wakhri Zone
+                                    </span>
+
+                                    <small>
+                                        7 min ago
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- SAFE -->
+
+                            <div class="activity safe">
+
+                                <div class="activity-icon">
+                                    ✓
+                                </div>
+
+                                <div class="activity-text">
+
+                                    <strong>
+                                        Medical unit available
+                                    </strong>
+
+                                    <span>
+                                        Route Sector 04
+                                    </span>
+
+                                    <small>
+                                        11 min ago
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- INFO -->
+
+                            <div class="activity info">
+
+                                <div class="activity-icon">
+                                    i
+                                </div>
+
+                                <div class="activity-text">
+
+                                    <strong>
+                                        Wari movement detected
+                                    </strong>
+
+                                    <span>
+                                        Malshiras Route
+                                    </span>
+
+                                    <small>
+                                        16 min ago
+                                    </small>
+
+                                </div>
+
+                            </div>
+
+
+                        </div>
+
+
+                        <button class="feed-footer" id="viewAllSignals" type="button">
+                            View all signals →
+                        </button>
+
+
+                    </article>
+
+
+                </section>
+
+
+
+                <!-- INTELLIGENCE INSIGHTS -->
+
+                <section class="insights">
+
+
+                    <!-- PREDICTION -->
+
+                    <article class="insight">
+
+                        <div class="insight-tag">
+                            PREDICTIVE INTELLIGENCE
+                        </div>
+
+                        <h4>
+                            Risk is expected to rise
+                            in Chandrabhaga.
+                        </h4>
+
+                        <p>
+                            Crowd density and heat conditions
+                            indicate an elevated risk window
+                            over the next 20 minutes.
+                        </p>
+
+                        <a href="#risk-prediction"
+                           data-page-link="risk-prediction">
+                            View prediction →
+                        </a>
+
+                    </article>
+
+
+                    <!-- RESOURCES -->
+
+                    <article class="insight">
+
+                        <div class="insight-tag">
+                            RESOURCE STATUS
+                        </div>
+
+                        <h4>
+                            3 water points need attention.
+                        </h4>
+
+                        <p>
+                            Current consumption indicates
+                            increased hydration demand across
+                            high-density zones.
+                        </p>
+
+                        <a href="#resource-network"
+                           data-page-link="resource-network">
+                            Open resources →
+                        </a>
+
+                    </article>
+
+
+                    <!-- AI -->
+
+                    <article class="insight">
+
+                        <div class="insight-tag">
+                            VIGIL AI
+                        </div>
+
+                        <h4>
+                            "Watch the next 20 minutes."
+                        </h4>
+
+                        <p>
+                            The overall situation is stable,
+                            but Chandrabhaga requires attention.
+                        </p>
+
+                        <a href="#" class="ask-vigil-ai" data-ai>Ask Vigil AI →</a>
+
+                    </article>
+
+
+                </section>
+
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 PAGE 2 — LIVE WARI
+            ====================================================== -->
+
+            <section id="live-wari"
+                     class="page-section dashboard-page">
+
+                <div class="hero">
+
+                    <div>
+
+                        <div class="hero-label">
+                            LIVE WARI
+                        </div>
+
+                        <h2>
+                            Real-time Wari
+                            <span>journey monitoring.</span>
+                        </h2>
+
+                        <p>
+                            Monitor the movement of Warkaris,
+                            route progress, weather and live
+                            field conditions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <h3>Current Location</h3>
+                        <div class="feature-number">
+                            Wakhri
+                        </div>
+                        <p>
+                            Current monitored Wari zone.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Warkaris on Route</h3>
+                        <div class="feature-number">
+                            1.18M
+                        </div>
+                        <p>
+                            Estimated pilgrims currently
+                            being monitored.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Journey Progress</h3>
+                        <div class="feature-number">
+                            68%
+                        </div>
+                        <p>
+                            Pune → Wakhri → Pandharpur
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Temperature</h3>
+                        <div class="feature-number">
+                            30°C
+                        </div>
+                        <p>
+                            Current monitored temperature.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Route Status</h3>
+                        <div class="feature-number">
+                            WATCH
+                        </div>
+                        <p>
+                            Some high-density areas require
+                            attention.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Live Movement</h3>
+                        <div class="feature-number">
+                            ACTIVE
+                        </div>
+                        <p>
+                            Wari movement signals are active.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 PAGE 3 — CROWD INTELLIGENCE
+            ====================================================== -->
+
+            <section id="crowd-intelligence"
+                     class="page-section dashboard-page">
+
+                <div class="hero">
+
+                    <div>
+
+                        <div class="hero-label">
+                            CROWD INTELLIGENCE
+                        </div>
+
+                        <h2>
+                            Understand crowd movement
+                            <span>before congestion escalates.</span>
+                        </h2>
+
+                        <p>
+                            Analyze density, movement and
+                            high-pressure zones across the Wari route.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="kpi-grid">
+
+                    <article class="kpi">
+
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                CROWD DENSITY
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            72<small>%</small>
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span class="high">
+                                ELEVATED
+                            </span>
+                            <span>
+                                current condition
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="kpi">
+
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                PEAK DENSITY
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            86<small>%</small>
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span class="critical">
+                                HIGH
+                            </span>
+                            <span>
+                                observed zone
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="kpi">
+
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                MOVEMENT
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            1.8<small>km/h</small>
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span>
+                                LIVE
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="kpi">
+
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                CROWD GROWTH
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            +6.2<small>%</small>
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span class="up">
+                                RISING
+                            </span>
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <h3>Wakhri</h3>
+                        <div class="feature-number">
+                            74%
+                        </div>
+                        <p>
+                            Elevated crowd density.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Chandrabhaga</h3>
+                        <div class="feature-number">
+                            89%
+                        </div>
+                        <p>
+                            Critical crowd pressure zone.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Pandharpur</h3>
+                        <div class="feature-number">
+                            61%
+                        </div>
+                        <p>
+                            Moderate crowd density.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 PAGE 4 — HEALTH & SAFETY
+            ====================================================== -->
+
+            <section id="health-safety"
+                     class="page-section dashboard-page">
+
+                <div class="hero">
+
+                    <div>
+
+                        <div class="hero-label">
+                            HEALTH & SAFETY
+                        </div>
+
+                        <h2>
+                            Monitor pilgrim health
+                            <span>and safety signals.</span>
+                        </h2>
+
+                        <p>
+                            Identify heat stress, dehydration,
+                            medical demand and safety conditions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="kpi-grid">
+
+                    <article class="kpi">
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                HEAT STRESS
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            HIGH
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span class="high">
+                                WATCH
+                            </span>
+                        </div>
+                    </article>
+
+
+                    <article class="kpi">
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                DEHYDRATION CASES
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            24
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span>
+                                monitored
+                            </span>
+                        </div>
+                    </article>
+
+
+                    <article class="kpi">
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                HEAT STROKE
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            07
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span class="critical">
+                                ATTENTION
+                            </span>
+                        </div>
+                    </article>
+
+
+                    <article class="kpi">
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                MEDICAL CASES
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            31
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span>
+                                current period
+                            </span>
+                        </div>
+                    </article>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <h3>Medical Camp A</h3>
+                        <div class="feature-number">
+                            82%
+                        </div>
+                        <p>
+                            Current medical load.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Medical Camp B</h3>
+                        <div class="feature-number">
+                            64%
+                        </div>
+                        <p>
+                            Current medical load.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Medical Camp C</h3>
+                        <div class="feature-number">
+                            41%
+                        </div>
+                        <p>
+                            Current medical load.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 PAGE 5 — RISK PREDICTION
+            ====================================================== -->
+
+            <section id="risk-prediction"
+                     class="page-section dashboard-page">
+
+                <div class="hero">
+
+                    <div>
+
+                        <div class="hero-label">
+                            PREDICTIVE INTELLIGENCE
+                        </div>
+
+                        <h2>
+                            Predict risk
+                            <span>before it becomes an emergency.</span>
+                        </h2>
+
+                        <p>
+                            Combine crowd, weather, medical and
+                            environmental signals to estimate
+                            upcoming risk conditions.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="kpi-grid">
+
+                    <article class="kpi">
+
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                CURRENT RISK
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            43<small>/100</small>
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span class="high">
+                                WATCH
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="kpi">
+
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                NEXT 20 MIN
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            57<small>/100</small>
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span class="high">
+                                RISING
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="kpi">
+
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                NEXT 30 MIN
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            68<small>/100</small>
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span class="critical">
+                                ELEVATED
+                            </span>
+                        </div>
+
+                    </article>
+
+
+                    <article class="kpi">
+
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                CONFIDENCE
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            91<small>%</small>
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span>
+                                model confidence
+                            </span>
+                        </div>
+
+                    </article>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <h3>Crowd Density</h3>
+                        <div class="feature-number">
+                            72%
+                        </div>
+                        <p>
+                            One of the major contributing signals.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Temperature</h3>
+                        <div class="feature-number">
+                            30°C
+                        </div>
+                        <p>
+                            Environmental heat contribution.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Medical Load</h3>
+                        <div class="feature-number">
+                            64%
+                        </div>
+                        <p>
+                            Current medical demand signal.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Water Availability</h3>
+                        <div class="feature-number">
+                            68%
+                        </div>
+                        <p>
+                            Estimated available water resource.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>AI Recommendation</h3>
+                        <div class="feature-number">
+                            WATCH
+                        </div>
+                        <p>
+                            Monitor Chandrabhaga and prepare
+                            preventive resources.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Prediction Window</h3>
+                        <div class="feature-number">
+                            30 MIN
+                        </div>
+                        <p>
+                            Short-term predictive monitoring window.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 PAGE 6 — RESOURCE NETWORK
+            ====================================================== -->
+
+            <section id="resource-network"
+                     class="page-section dashboard-page">
+
+                <div class="hero">
+
+                    <div>
+
+                        <div class="hero-label">
+                            RESOURCE NETWORK
+                        </div>
+
+                        <h2>
+                            Know where resources are
+                            <span>before they are needed.</span>
+                        </h2>
+
+                        <p>
+                            Monitor volunteers, medical teams,
+                            ambulances, water tankers and rest camps.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="kpi-grid">
+
+                    <article class="kpi">
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                MEDICAL TEAMS
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            18
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span>
+                                available
+                            </span>
+                        </div>
+                    </article>
+
+
+                    <article class="kpi">
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                AMBULANCES
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            07
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span>
+                                available
+                            </span>
+                        </div>
+                    </article>
+
+
+                    <article class="kpi">
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                VOLUNTEERS
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            342
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span>
+                                active
+                            </span>
+                        </div>
+                    </article>
+
+
+                    <article class="kpi">
+                        <div class="kpi-header">
+                            <span class="kpi-title">
+                                WATER TANKERS
+                            </span>
+                        </div>
+
+                        <div class="kpi-value">
+                            12
+                        </div>
+
+                        <div class="kpi-bottom">
+                            <span>
+                                active
+                            </span>
+                        </div>
+                    </article>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <h3>Rest Camps</h3>
+                        <div class="feature-number">
+                            06
+                        </div>
+                        <p>
+                            Monitored rest and accommodation camps.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Water Points</h3>
+                        <div class="feature-number">
+                            34
+                        </div>
+                        <p>
+                            Water supply locations being monitored.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Charging Points</h3>
+                        <div class="feature-number">
+                            11
+                        </div>
+                        <p>
+                            Public charging resources.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 PAGE 7 — EMERGENCY HUB
+            ====================================================== -->
+
+            <section id="emergency-hub"
+                     class="page-section dashboard-page">
+
+                <div class="hero">
+
+                    <div>
+
+                        <div class="hero-label">
+                            EMERGENCY RESPONSE
+                        </div>
+
+                        <h2>
+                            Coordinate emergency response
+                            <span>from one place.</span>
+                        </h2>
+
+                        <p>
+                            Monitor incidents, severity, assigned
+                            teams and response status.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <h3>CRITICAL</h3>
+                        <div class="feature-number">
+                            02
+                        </div>
+                        <p>
+                            Active critical incidents requiring
+                            immediate attention.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>WARNINGS</h3>
+                        <div class="feature-number">
+                            06
+                        </div>
+                        <p>
+                            Active warning conditions across
+                            monitored zones.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>RESPONSE TEAMS</h3>
+                        <div class="feature-number">
+                            18
+                        </div>
+                        <p>
+                            Teams available for deployment.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>INCIDENT</h3>
+                        <div class="feature-number">
+                            CROWD
+                        </div>
+                        <p>
+                            Crowd pressure detected near
+                            Chandrabhaga Ghat.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>LOCATION</h3>
+                        <div class="feature-number">
+                            WAKHRI
+                        </div>
+                        <p>
+                            Hydration demand is currently increasing.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>RESPONSE STATUS</h3>
+                        <div class="feature-number">
+                            ACTIVE
+                        </div>
+                        <p>
+                            Response monitoring is currently active.
+                        </p>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =====================================================
+                 PAGE 8 — REPORTS
+            ====================================================== -->
+
+            <section id="reports"
+                     class="page-section dashboard-page">
+
+                <div class="hero">
+
+                    <div>
+
+                        <div class="hero-label">
+                            INSIGHTS & REPORTS
+                        </div>
+
+                        <h2>
+                            Turn Wari intelligence
+                            <span>into actionable reports.</span>
+                        </h2>
+
+                        <p>
+                            Review daily safety conditions,
+                            incidents, risk trends and resource status.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature-grid">
+
+                    <div class="feature-card">
+                        <h3>Daily Safety Report</h3>
+                        <div class="feature-number">
+                            READY
+                        </div>
+                        <p>
+                            Daily summary of crowd, health,
+                            weather and safety conditions.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Crowd Report</h3>
+                        <div class="feature-number">
+                            72%
+                        </div>
+                        <p>
+                            Current average monitored crowd density.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Risk Report</h3>
+                        <div class="feature-number">
+                            43/100
+                        </div>
+                        <p>
+                            Current project risk score.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Health Report</h3>
+                        <div class="feature-number">
+                            31
+                        </div>
+                        <p>
+                            Current monitored medical cases.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Resource Report</h3>
+                        <div class="feature-number">
+                            342
+                        </div>
+                        <p>
+                            Active volunteers currently monitored.
+                        </p>
+                    </div>
+
+                    <div class="feature-card">
+                        <h3>Generate Report</h3>
+                        
+
+<!-- Your existing JavaScript file -->
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
